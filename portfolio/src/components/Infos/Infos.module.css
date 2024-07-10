@@ -1,0 +1,38 @@
+.infos{
+    margin-left:16px;
+    width: 80%;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.balise{
+    padding:2px 5px;
+    margin:4px;
+}
+
+.infos p{
+    width:90%;
+    margin: 0;
+    font-family: "Red Hat Mono";
+    color:#CAD2C5;
+    font-size:16px;
+    line-height: 20px;
+}
+
+.infos h1{
+    font-size: 24px;
+    font-weight: 300;
+    color:#CAD2C5;
+    width: 90%;
+    margin:16px 0;
+    line-height: 40px;;
+}
+
+.infos h2{
+    font-size: 20px;
+    color:#CAD2C5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
