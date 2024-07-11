@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Infos.module.css';
 import Balise from '../Balise/Balise';
+import Titre from "../Title/Title"
 
 const Infos = () => {
   return (
     <div className={styles.infos}>
         <div className={styles.presentation}></div>
-        <h1>Un peu plus sur moi</h1>
+        <Titre titre={"Un peu plus sur moi"}></Titre>
         <p>Je suis un web développeur de 24 ans residant sur Paris spécialisé en Front-End. Mes compétences englobent principalement le développement avec React, HTML, CSS et JavaScript. Avide de nouveaux défis, mon objectif est de concevoir des expériences utilisateur intuitives et innovantes. N'hésitez pas à me contacter pour toute demande par mail <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via la page <a href='/contact'>contact</a>.</p>
       <div className={styles.competences}>
       <h2>Compétences</h2>
@@ -31,10 +32,10 @@ const Infos = () => {
         height={191}
       />
       </picture>
-    <a href="">VOIR MES PROJETS    -></a>
-    <a href="">CV -></a>
-    <a href="">EMAIL -></a>
-    <a href="">LINKEDIN -></a>
+    <a href="">VOIR MES PROJETS <picture><img src='./assets/arrow.png' alt=""></img> </picture>  </a>
+    <a href="">CV <picture><img src='./assets/arrow.png' alt=""></img> </picture></a>
+    <a href="">EMAIL <picture><img src='./assets/arrow.png' alt=""></img> </picture></a>
+    <a href="">LINKEDIN <picture><img src='./assets/arrow.png' alt=""></img> </picture> </a>
     </div>
     </div>
   );

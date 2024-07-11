@@ -59,7 +59,9 @@
     letter-spacing: 1px;
     text-decoration: none;
 }
-
+.links a picture img{
+    
+}
 .me{
     margin-bottom:8px;
 }

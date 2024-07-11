@@ -65,4 +65,6 @@ export const projects: Project[]= [
         githubLink:"https://github.com/PedroGassies/MonVieuxGrimoire.git",
         images:["/assets/mockup.jpg","/assets/mockup.jpg","/assets/mockup.jpg"]
     },
-]
+];
+
+export default projects;
