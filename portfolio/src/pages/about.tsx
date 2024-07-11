@@ -8,7 +8,7 @@ import Infos from '../components/Infos/Infos'
 
 const AboutPage = () => {
     return (
-        <div>
+        <div className={styles.about}>
             <main>
             <Balise className={styles.titre} textColor='#1C2226' backgroundColor='#CAD2C5' content='<a-propos>'></Balise>
             <Infos />
