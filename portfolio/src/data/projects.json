@@ -9,7 +9,8 @@
       ],
       "websiteLink": "",
       "githubLink": "https://github.com/PedroGassies/Projet_Deux_Gassies_Pedro.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"]
+      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
+     "year":2024
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       ],
       "websiteLink": "",
       "githubLink": "https://github.com/PedroGassies/Sophie-Bluel.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"]
+      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
+      "year":2024
     },
     {
       "id": 3,
@@ -33,7 +35,8 @@
       ],
       "websiteLink": "",
       "githubLink": "https://github.com/PedroGassies/Kasa.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"]
+      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
+      "year":2024
     },
     {
       "id": 4,
@@ -45,7 +48,8 @@
       ],
       "websiteLink": "",
       "githubLink": "https://github.com/PedroGassies/MonVieuxGrimoire.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"]
+      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
+      "year":2024
     }
   ]
   

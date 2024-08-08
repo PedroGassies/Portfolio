@@ -1,17 +1,26 @@
 import React from 'react';
+import Image from 'next/image';
+import { Skills } from '../../../data/projectTypes';
 import styles from './Competences.module.css';
+
 interface CompetencesProps {
-  textColor: string;
-  backgroundColor:string;
-  content: string;
+    skills: Skills[];
 }
 
-const Balise: React.FC<CompetencesProps> = ({ textColor, backgroundColor, content }) => {
-  return (
-    <p className={styles.balise} style={{ color: textColor , backgroundColor: backgroundColor}}>
-    {content}
-    </p>
-  );
+const Competences: React.FC<CompetencesProps> = ({ skills }) => {
+    return (
+        <div className={styles.competences}>
+            <h3>Compétences</h3>
+            <ul className={styles.list}>
+                {skills.map((skill) => (
+                    <li key={skill.name} className={styles.skill}>
+                        <Image src={skill.logo} alt={skill.name} width={50} height={50} />
+                        <span>{skill.name}</span>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 };
 
-export default Balise;
+export default Competences;

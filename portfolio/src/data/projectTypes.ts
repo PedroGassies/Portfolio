@@ -10,6 +10,7 @@ export interface Project{
     skills:Skills[],
     websiteLink :string,
     githubLink:string,
-    images:string[]
+    images:string[],
+    year:number
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ProjectCard.module.css';
 import Balise from '../Balise/Balise';
 import Titre from '../Title/Title';
+import Competences from "../Infos/Competences/Competences"
 import ProjectImages from '../ProjectImages/ProjectImages'; 
 import { Project } from '../../data/projectTypes';
 
@@ -15,7 +16,8 @@ const Projet: React.FC<ProjetProps> = ({ project }) => {
                 <Balise className={styles.titre} textColor='#CAD2C5' backgroundColor='#52796F' content='<projet>' />
                 <Titre titre={project.title} />
                 <p>{project.description}</p>
-                <div>
+                <Competences skills={project.skills}/>
+                <div className={styles.links}>
                     <a href={project.websiteLink}>Website</a>
                     <a href={project.githubLink}>GitHub</a>
                 </div>
