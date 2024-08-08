@@ -1,0 +1,31 @@
+
+.form {
+    min-height: 100vh;
+    background-color: #52796F; 
+}
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+width:100%;
+}
+.input-box {
+    width:95%;
+    margin-bottom: 1rem;
+}
+
+.field {
+    width:95%;
+    margin:0 auto;
+    padding: 0.5rem;
+}
+
+.mess {
+    height: 115px;
+}
+
+.send{
+    display: flex;
+    margin-right: auto;
+}
