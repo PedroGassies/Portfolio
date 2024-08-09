@@ -14,7 +14,7 @@ interface ProjectsPageProps {
 const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
     return (
         <div className={styles.projets}>
-            <main>
+            <main className={styles.body}>
             <Balise className={styles.titre} textColor='#CAD2C5' backgroundColor='#52796F' content='<archive>'></Balise>
             <ProjectsList projects={projects} />
             </main>

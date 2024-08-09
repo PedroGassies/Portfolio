@@ -13,6 +13,9 @@ width:82px;
     margin-top:8px;
     margin-bottom: 24px;
     color:#52796F;
+    border-bottom: #52796F 1px solid;
+    height:40px;
+    padding-left: 2px;
 }
 
 .projet p{

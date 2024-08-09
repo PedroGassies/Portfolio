@@ -2,6 +2,13 @@
     background-color: #CAD2C5;
 }
 .titre{
-    width:105px;
+    width:90px;
     font-size: 16px;
+    padding-top:3px;
+    height:24px;
+    margin-bottom: 8px;;
+}
+
+.body{
+    margin:0 3%;
 }

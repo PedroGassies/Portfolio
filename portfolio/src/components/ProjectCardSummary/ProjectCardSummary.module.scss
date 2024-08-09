@@ -1,23 +1,39 @@
-.card{  
-    .details{
-        display: flex;
-        justify-content: space-between;
-        .title{
-            color:inherit;
-            text-decoration: none;
+.link{
+    text-decoration: none;
+    .card{ 
+        margin-bottom:24px;
+        p,h3 {
+            text-decoration: none; 
+            margin-bottom: 8px;
         }
-        .infos{
-            width:50%;
-            display:flex;
+        image{
+            width:100%;
+        }
+        .details{
+            display: flex;
             justify-content: space-between;
-            .skills{
-                display: flex;
-                .skill{
-                    color:inherit;
-                    text-decoration: none;
-                    margin-right:8px;
-                }
+            .title{
+                font-weight: 300;
+                color: #52796F;  
+                font-size: 16px;;
             }
-        };
+            .infos{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                .skills{
+                    display: flex;
+                    margin-right:32px ;
+                    .skill{
+                        color: #52796F;
+                        margin-right:4px;
+                    }
+                }
+                .year{
+                    color:#52796F;
+                }
+            };
+        }
     }
+    
 }
