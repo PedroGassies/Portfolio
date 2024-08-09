@@ -10,15 +10,15 @@ interface CompetencesProps {
 const Competences: React.FC<CompetencesProps> = ({ skills }) => {
     return (
         <div className={styles.competences}>
-            <h3>Compétences</h3>
-            <ul className={styles.list}>
+            <h3>COMPETENCES</h3>
+            <div className={styles.list}>
                 {skills.map((skill) => (
-                    <li key={skill.name} className={styles.skill}>
+                    <div key={skill.name} className={styles.skill}>
                         <Image src={skill.logo} alt={skill.name} width={50} height={50} />
                         <span>{skill.name}</span>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };

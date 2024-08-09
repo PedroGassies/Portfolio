@@ -3,6 +3,17 @@
     flex-direction: column;
 }
 .links a{
-    margin-left: auto;
     margin-top:16px;
+    text-decoration: none;
+    color:#52796F
 }
+
+.titre{
+    width: 80px;
+    line-height: 30px;
+}
+
+.body h3,.links{
+    font-size: 20px;
+}
+

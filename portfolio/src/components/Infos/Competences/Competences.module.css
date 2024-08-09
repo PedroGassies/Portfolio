@@ -1,0 +1,31 @@
+.competences {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.list {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.skill {
+    display: flex;
+    align-items: center; 
+}
+
+.list span {
+    margin-left: 5px; 
+    font-family: 'Aspekta';
+    font-weight: 300;
+    font-size: 16px;
+    color: #52796F;
+}
+
+.competences h3{
+    color:#52796F;
+    font-size: 20px;
+    font-family: "Aspekta";
+    font-weight: 300;
+}

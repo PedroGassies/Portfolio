@@ -63,12 +63,12 @@ const Form: React.FC = () => {
         <div className={styles['input-box']}>
           <textarea
             className={`${styles.field} ${styles.mess}`}
-            placeholder="MESSAGE"
+            placeholder="ECRIRE UN MESSAGE"
             name='message'
             required
           ></textarea>
         </div>
-        <button type="submit">Envoyer    -></button>
+        <button className={styles.send}type="submit">ENVOYER    -></button>
         {result && <p>{result}</p>}
       </form>
     </section>

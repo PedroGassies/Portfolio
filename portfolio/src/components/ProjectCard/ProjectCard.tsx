@@ -12,14 +12,14 @@ interface ProjetProps {
 
 const Projet: React.FC<ProjetProps> = ({ project }) => {
     return (
-            <div>
+            <div className={styles.projet}>
                 <Balise className={styles.titre} textColor='#CAD2C5' backgroundColor='#52796F' content='<projet>' />
                 <Titre titre={project.title} />
                 <p>{project.description}</p>
                 <Competences skills={project.skills}/>
                 <div className={styles.links}>
-                    <a href={project.websiteLink}>Website</a>
-                    <a href={project.githubLink}>GitHub</a>
+                    <a href={project.websiteLink}>VOIR LE SITE -></a>
+                    <a href={project.githubLink}>VOIR LE REPOS GITHUB -></a>
                 </div>
                 <ProjectImages images={project.images} title={project.title} />
             </div>

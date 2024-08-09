@@ -13,7 +13,7 @@ interface ProjectPageProps {
   const ProjetPage: React.FC<ProjectPageProps> = ({ project }) => {
     return (
       <div className={styles.projet}>
-        <main>
+        <main className={styles.body}>
           <Projet project={project} />
         </main>
         <Footer textColor="#52796F" />

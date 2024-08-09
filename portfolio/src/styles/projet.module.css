@@ -6,5 +6,21 @@ align-items: center;
 height:25px;
 padding-top:5px;
 margin-left: 16px;
-width:77px;
+width:82px;
+}
+
+.projet h1{
+    margin-top:8px;
+    margin-bottom: 24px;
+    color:#52796F;
+}
+
+.projet p{
+    font-family: 'Red Hat Mono';
+    font-size: 16px;
+    line-height: 20px;
+    color:#52796F;
+}
+.body{
+    margin:0 5%;
 }

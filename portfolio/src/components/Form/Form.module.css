@@ -1,17 +1,16 @@
 
 .form {
     min-height: 100vh;
-    background-color: #52796F; 
 }
 .formulaire{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-width:100%;
+    width:100%;
 }
 .input-box {
-    width:95%;
+    width:100%;
     margin-bottom: 1rem;
 }
 
@@ -19,6 +18,18 @@ width:100%;
     width:95%;
     margin:0 auto;
     padding: 0.5rem;
+    background: none;
+    border-style: none;
+    border-bottom: #CAD2C5 solid 1px;
+    color:#CAD2C5;
+    font-family: 'Aspekta';
+    font-size: 20px;
+}
+.field::placeholder{
+    color:#CAD2C5;
+    font-family: 'Aspekta';
+    font-size: 20px;
+    opacity: 20%;;
 }
 
 .mess {
@@ -28,4 +39,10 @@ width:100%;
 .send{
     display: flex;
     margin-right: auto;
+    background: none;
+    border-style: none;
+    color:#CAD2C5;
+    font-family: 'Aspekta';
+    font-size: 24px;
+    margin-top: 32px;
 }
