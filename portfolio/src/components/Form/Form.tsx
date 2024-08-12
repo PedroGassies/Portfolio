@@ -46,7 +46,7 @@ const Form: React.FC = () => {
           <input
             type="text"
             className={styles.field}
-            placeholder='PRENOM NOM'
+            placeholder='NOM PRÉNOM'
             name='name'
             required
           />
