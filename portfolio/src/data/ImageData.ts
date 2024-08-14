@@ -2,25 +2,25 @@
 
 export const imageItems = [
     { 
-      buttonText: '<className="Booki">', 
+      buttonText: '<.>', 
       imageSrc: './assets/mockup.jpg', 
       buttonClassName: 'buttonBooki', 
       imageClassName: 'imageBooki' 
     },
     { 
-      buttonText: '<className="SophieBluel">', 
+      buttonText: '<.>', 
       imageSrc: './assets/mockup.jpg', 
       buttonClassName: 'buttonSophieBluel', 
       imageClassName: 'imageSophieBluel' 
     },
     { 
-      buttonText: '<className="Kasa">', 
+      buttonText: '<.>', 
       imageSrc: './assets/mockup.jpg', 
       buttonClassName: 'buttonKasa', 
       imageClassName: 'imageKasa' 
     },
     { 
-        buttonText: '<className="MonVieuxGrimoire">', 
+        buttonText: '<.>', 
         imageSrc: './assets/mockup.jpg', 
         buttonClassName: 'buttonMonVieuxGrimoire', 
         imageClassName: 'imageMonVieuxGrimoire' 

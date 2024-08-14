@@ -1,50 +1,66 @@
-import React, { useEffect } from 'react';
-import styles from './Header.module.scss';
+import React, { useState } from 'react';
+import styles from './Header.module.css';
+import HiddenImages from "../HiddenImages/HiddenImages"
 
-const Header: React.FC = () => {
-  useEffect(() => {
-    const burger = document.querySelector(`.${styles.burger}`) as HTMLElement | null;
-    const navbar = document.querySelector(`.${styles.navbar}`) as HTMLElement | null;
-    const navLinks = document.querySelectorAll(`.${styles.navLink}`);
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-    const handleBurgerClick = () => {
-      if (burger && navbar) {
-        burger.classList.toggle(styles.burgerOpen);
-        navbar.classList.toggle(styles.navOpen);
-        navLinks.forEach((link: Element) => {
-          link.classList.toggle(styles.navLinkOpen);
-        });
-      }
-    };
-
-    if (burger) {
-      burger.addEventListener('click', handleBurgerClick);
+  const toggleMenu = () => {
+    if (isOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsOpen(false);
+        setIsClosing(false);
+      }, 500); // Temps pour l'animation de fermeture, doit correspondre à la durée de la transition CSS
+    } else {
+      setIsOpen(true);
     }
-
-    return () => {
-      if (burger) {
-        burger.removeEventListener('click', handleBurgerClick);
-      }
-    };
-  }, []);
+  };
 
   return (
     <header className={styles.header}>
-      <div className={`${styles.burger} burger`}>
-        <i className="fas fa-bars fa-2x"></i>
-        <i className="fas fa-times fa-2x"></i>
+      {/* Symbol Definitions */}
+      <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" style={{ display: 'none' }}>
+        <symbol id="line" viewBox="0 0 150 1">
+          <line y1="0.5" x2="150" y2="0.5" stroke="currentColor" strokeWidth="2" />
+        </symbol>
+        <symbol id="circle" viewBox="0 0 182 182">
+          <circle cx="91" cy="91" r="87.5" stroke="currentColor" strokeWidth="4" fill="none" />
+        </symbol>
+      </svg>
+
+      <div className={styles.container}>
+        <div
+          className={`${styles.burgerMenuWrapper} ${isOpen ? styles.open : ''} ${isClosing ? styles.closing : ''}`}
+          onClick={toggleMenu}
+        >
+          <svg className={styles.circle}>
+            <use xlinkHref="#circle" />
+          </svg>
+          <svg className={`${styles.line} ${styles.topLine}`}>
+            <use xlinkHref="#line" />
+          </svg>
+          <svg className={`${styles.line} ${styles.middleLine}`}>
+            <use xlinkHref="#line" />
+          </svg>
+          <svg className={`${styles.line} ${styles.bottomLine}`}>
+            <use xlinkHref="#line" />
+          </svg>
+        </div>
+
+        <nav className={`${styles.menu} ${isOpen ? styles.open : styles.closed}`}>
+          <ul className={styles.menuItems}>
+            <li className={styles.menuItem}>Accueil</li>
+            <li className={styles.menuItem}>A propos</li>
+            <li className={styles.menuItem}>Archives</li>
+            <li className={styles.menuItem}>Contact</li>
+          </ul>
+        </nav>
       </div>
-      <nav className={styles.navbar}>
-        <ul className={styles.navLinks}>
-          <li className={styles.navLink}><a href="#">Home</a></li>
-          <li className={styles.navLink}><a href="#">Blog</a></li>
-          <li className={styles.navLink}><a href="#">Gallery</a></li>
-          <li className={styles.navLink}><a href="#">About</a></li>
-          <li className={styles.navLink}><a href="#">Contact</a></li>
-        </ul>
-      </nav>
     </header>
   );
 };
 
 export default Header;
+

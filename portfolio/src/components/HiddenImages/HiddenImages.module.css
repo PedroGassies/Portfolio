@@ -1,13 +1,60 @@
 /* TypeToggleImage.module.css */
 .image {
-    width: 300px; /* Définir une largeur fixe */
+    width: 100px; /* Définir une largeur fixe */
     height: auto; /* Conserver les proportions d'origine */
   }
   
   /* Dimensions relatives */
   .image {
-    width: 50%; /* Largeur relative au conteneur parent */
+    position: absolute;
+    width: 40%; /* Largeur relative au conteneur parent */
     height: auto; /* Conserver les proportions d'origine */
   }
   
- 
+
+.imageSophieBluel{
+  right:50px;
+  top:80px;
+}
+
+.imageKasa{
+left:45px;
+top:80px;  
+}
+
+.imageBooki{
+  bottom:110px;
+  left:40px;
+}
+
+.imageMonVieuxGrimoire{
+  bottom:120px;
+  right:40px;
+}
+
+.toggleButton{
+  position:absolute;
+  background: #1C2226;
+  color:#FFFAF4;
+  border: none;
+}
+
+.buttonKasa{
+  bottom:250px;
+  left:60px;
+}
+
+.buttonBooki{
+  top:200px;
+  right:70px; 
+}
+
+.buttonSophieBluel{
+  bottom:300px;
+  right:100px;
+}
+
+.buttonMonVieuxGrimoire{
+  left:80px;
+  top:250px;
+}

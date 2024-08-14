@@ -16,22 +16,21 @@ const HiddenImages: React.FC<TypeToggleImageProps> = ({ items }) => {
   const handleClick = (index: number) => {
     setVisibleIndex(visibleIndex === index ? null : index); // Toggle visibility
   };
-
   return (
     <div>
       {items.map((item, index) => (
         <div key={index} className={styles.wrapper}>
           <button 
-            className={`${styles.toggleButton} ${item.buttonClassName}`} 
+            className={`${styles.toggleButton} ${styles[item.buttonClassName]}`} 
             onClick={() => handleClick(index)}
           >
-            {visibleIndex === index ? 'Cacher Image' : item.buttonText}
+            {item.buttonText}
           </button>
           {visibleIndex === index && (
             <img 
               src={item.imageSrc} 
               alt={`Image ${index + 1}`} 
-              className={`${styles.image} ${item.imageClassName}`} 
+              className={`${styles.image} ${styles[item.imageClassName]}`} 
             />
           )}
         </div>
