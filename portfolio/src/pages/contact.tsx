@@ -9,6 +9,8 @@ import Form from '../components/Form/Form';
 const ContactPage: React.FC = () => {
     return (
         <div className={styles.contact}>
+            <Header mainColor="#52796F"
+            secondaryColor="#CAD2C5"/>
         <main className={styles.body}>
             <Titre titre="FAISONS QUELQUE CHOSE D'INCROYABLE ENSEMBLE" />
             <p className={styles.text}>N'hésitez pas à me contacter pour toute demande de renseignements, de collaboration, d'infos complémentaire ou juste pour me dire bonjour par mail ici <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via ce formulaire.</p>

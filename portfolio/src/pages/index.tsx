@@ -11,8 +11,8 @@ const App = () => {
 
   return (
     <div className={styles.index}>
-      <Header textColor=""
-      menuOpenBackgroundColor="#FFFAF4"/>
+      <Header mainColor="#1C2226"
+      secondaryColor="#FFFAF4"/>
         <main className={styles.body}>
             <HiddenImages items={firstHalf} />
             <div className={styles.type}><TypeMachine /></div>

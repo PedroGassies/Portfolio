@@ -3,18 +3,24 @@ import styles from './Header.module.css';
 import Link from 'next/link';
 
 interface HeaderProps {
-  textColor?: string;
-  menuOpenBackgroundColor?: string;
+  mainColor?: string;
+  secondaryColor?: string;
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  textColor = 'white',
-  menuOpenBackgroundColor = '#0f172a',
+  secondaryColor = 'white',
+  mainColor = '#0f172a',
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
   const menuButtonRef = useRef<HTMLDivElement>(null);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -38,12 +44,18 @@ export const Header: React.FC<HeaderProps> = ({
 
   const openMenu = () => {
     setIsTransitioning(true);
+    setIsClosing(false);
     setMenuOpen(true);
   };
 
   const closeMenu = () => {
     setIsTransitioning(true);
-    setMenuOpen(false);
+    setIsClosing(true);
+
+    setTimeout(() => {
+      setMenuOpen(false);
+      setIsClosing(false);
+    }, 300);
   };
 
   const onTransitionEnd = () => {
@@ -59,40 +71,64 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <nav className={styles.nav} style={{ color: textColor }}>
-      <Link href="/" passHref style={{ color: menuOpenBackgroundColor }}>
+    <header>
+    <nav className={styles.nav} style={{ color: isHydrated ? mainColor : undefined }}>
+      <Link
+        href="/"
+        passHref
+        style={{
+          color: isHydrated ? secondaryColor : undefined,
+        }}
+      >
         PEDRO GASSIES
       </Link>
       <div ref={menuButtonRef} className={styles.menu} onClick={toggleMenu}>
-        <span style={{ backgroundColor: menuOpenBackgroundColor }}></span>
-        <span style={{ backgroundColor: menuOpenBackgroundColor }}></span>
-        <span style={{ backgroundColor: menuOpenBackgroundColor }}></span>
+        <span style={{backgroundColor: secondaryColor }}></span>
+        <span style={{backgroundColor: secondaryColor }}></span>
+        <span style={{backgroundColor: secondaryColor }}></span>
       </div>
       <ul
         ref={menuRef}
-        className={menuOpen ? styles.open : styles.closed}
+        className={menuOpen && !isClosing ? styles.open : styles.closed}
+        style={{backgroundColor: menuOpen || isClosing ? secondaryColor : 'transparent'}}
         onTransitionEnd={onTransitionEnd}
-        style={{
-          backgroundColor: menuOpen || isTransitioning ? menuOpenBackgroundColor : 'transparent',
-        }}
       >
         <li>
-          <Link href="/projets" passHref>
+          <Link
+            href="/projets"
+            passHref
+            style={{
+              color: isHydrated && menuOpen ? mainColor : secondaryColor,
+            }}
+          >
             PROJETS
           </Link>
         </li>
         <li>
-          <Link href="/about" passHref>
+          <Link
+            href="/about"
+            passHref
+            style={{
+              color: isHydrated && menuOpen ? mainColor : secondaryColor,
+            }}
+          >
             A PROPOS
           </Link>
         </li>
         <li>
-          <Link href="/contact" passHref>
+          <Link
+            href="/contact"
+            passHref
+            style={{
+              color: isHydrated && menuOpen ? mainColor : secondaryColor,
+            }}
+          >
             CONTACT
           </Link>
         </li>
       </ul>
     </nav>
+    </header>
   );
 };
 

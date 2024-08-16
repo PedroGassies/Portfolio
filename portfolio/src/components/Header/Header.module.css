@@ -9,7 +9,6 @@
   top: 0;
   z-index: 1000; /* Assure que le menu reste au-dessus des autres éléments */
   box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-  margin-bottom: 100px;
 }
 
 .nav > :first-child {
@@ -36,9 +35,6 @@
   margin: 0 0.5rem;
 }
 
-.nav ul li > *:not(.active):hover {
-  background-color: #172554;
-}
 
 .nav .menu {
   display: none;
@@ -56,6 +52,15 @@
 }
 
 @media (max-width: 480px) {
+  .nav > a {
+    color: inherit;
+    background-color: inherit;
+  }
+
+  .nav ul li > a {
+    color: inherit;
+    background-color: inherit;
+  }
   .nav {
     padding: 30px 20px;
   }
@@ -75,9 +80,11 @@
     box-sizing: border-box;
     margin-top: 0;
   }
-
+  .nav li{
+    margin:25px 0;
+  }
   .nav ul.open {
-    font-family: 'Red Hat Mono';
+
     transform: translateX(100%); /* Ouvre le menu */
   }
 
@@ -88,4 +95,10 @@
   .nav .menu {
     display: flex;
   }
+  .nav ul.open, .nav ul.closed{
+    font-family: 'Red Hat Mono';
+    font-size: 24px;
+    align-items: center;
+  }
+  
 }

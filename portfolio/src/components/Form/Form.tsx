@@ -68,7 +68,7 @@ const Form: React.FC = () => {
             required
           ></textarea>
         </div>
-        <button className={styles.send}type="submit">ENVOYER    -></button>
+        <button className={styles.send}type="submit">ENVOYER    <picture><img src='./assets/arrow.png' alt=""></img> </picture></button>
         {result && <p>{result}</p>}
       </form>
     </section>

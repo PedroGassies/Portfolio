@@ -32,9 +32,8 @@ const Infos = () => {
         height={191}
       />
       </picture>
-    <a href="">VOIR MES PROJETS <picture><img src='./assets/arrow.png' alt=""></img> </picture>  </a>
+    <a href="/projets">VOIR MES PROJETS <picture><img src='./assets/arrow.png' alt=""></img> </picture>  </a>
     <a href="">CV <picture><img src='./assets/arrow.png' alt=""></img> </picture></a>
-    <a href="">EMAIL <picture><img src='./assets/arrow.png' alt=""></img> </picture></a>
     <a href="">LINKEDIN <picture><img src='./assets/arrow.png' alt=""></img> </picture> </a>
     </div>
     </div>

@@ -1,13 +1,6 @@
-/* TypeToggleImage.module.css */
-.image {
-    width: 100px; /* Définir une largeur fixe */
-    height: auto; /* Conserver les proportions d'origine */
-  }
-  
-  /* Dimensions relatives */
   .image {
     position: absolute;
-    width: 40%; /* Largeur relative au conteneur parent */
+    width: 40%; 
     height: auto; /* Conserver les proportions d'origine */
   }
   

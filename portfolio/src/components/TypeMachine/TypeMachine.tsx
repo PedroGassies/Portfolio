@@ -5,7 +5,7 @@ import styles from './TypeMachine.module.css';
 const TypeMachine= ( )=>{
     const textContent="Bienvenue sur mon site!"
     return(
-        <div>
+        <div className={styles.type}>
           <Typing
             text={[textContent]}
             speed={100}
@@ -14,7 +14,7 @@ const TypeMachine= ( )=>{
             typingDelay={500}
             className={styles.TyppingEffect}
           />
-          <p className={styles.TyppingEffect}>Je suis Pedro, développeur front-end, basé sur Paris.</p>
+          <p className={styles.sentence}>Je suis Pedro, développeur front-end, basé sur Paris.</p>
         </div>
        )
 }
