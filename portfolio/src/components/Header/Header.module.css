@@ -1,159 +1,91 @@
-
-
-.burger-menu-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-
-
-/* Container and wrapper styles */
-.container {
-  position: relative;
-  width: 50%;
-  height: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffff;
-  box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.2);
-}
-
-.burgerMenuWrapper {
-  position: absolute;
-  left: 200px;
-  top:90px;
-  transform: translate(-50%, -50%);
-  color:#FFFAF4;
-  width: 10rem;
-  height: 10rem;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 15;
-}
-
-/* SVG Circle */
-.circle {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: none;
-  stroke: #FFFAF4 ;
-  stroke-width: 0.6rem;
-  height: 100%;
+.nav {
   width: 100%;
-  stroke-dasharray: 550;
-  stroke-dashoffset: -550;
-  transition: 1.25s 0.55s ease-in-out;
-}
-
-/* SVG Lines */
-.line {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition-delay: 0ms;
-  height: 0.5rem;
-  width: 5rem;
-  background-color: #000000; /* Adjust this if needed */
-  stroke: #FFFAF4; /* Make sure the color matches the background */
-  stroke-width: 1rem;
-}
-
-/* Positioning the lines */
-.topLine {
-  transform-origin: left center;
-  top: 3.4rem;
-  transition: 1.25s 0.35s ease-in-out;
-}
-
-.middleLine {
-  top: 4.9rem;
-}
-
-.bottomLine {
-  transform-origin: left center;
-  top: 6.4rem;
-  transition: 1.25s 0.35s ease-in-out;
-}
-
-/* Animation states */
-.burgerMenuWrapper.open .circle {
-  stroke-dashoffset: 0;
-}
-
-.burgerMenuWrapper.open .middleLine {
-  transform: translateX(151%);
-  transition: 1.25s 0.1s ease-in-out;
-}
-
-.burgerMenuWrapper.closing .middleLine {
-  transform: translateX(-50%);
-  transition: 3s 1s ease-in-out;
-}
-
-.burgerMenuWrapper.open .topLine {
-  transform: translateX(-50%) rotate(45deg);
-  top: 3rem;
-  left: 57%;
-}
-
-.burgerMenuWrapper.open .bottomLine {
-  transform: translateX(-50%) rotate(-45deg);
-  left: 57%;
-}
-
-/* Menu styles */
-.menu {
-  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none; /* Couleur de fond du menu sera définie via props */
+  color: inherit; /* Couleur du texte héritée des props */
+  position: sticky;
   top: 0;
-  left: -54%; 
-  width: 80vw;
-  height: 100vh; /* Hauteur de l'écran */
-  background-color: #333; /* Couleur de fond du menu */
-  color: #FFFAF4; /* Couleur du texte du menu */
-  transform: translateX(0); /* Appliquer une translation pour le menu ouvert */
-  transition: transform 0.5s ease-in-out; /* Transition pour l'ouverture et la fermeture du menu */
+  z-index: 1000; /* Assure que le menu reste au-dessus des autres éléments */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  margin-bottom: 100px;
+}
+
+.nav > :first-child {
+  font-size: 1.5rem;
+  font-weight: light;
+  text-decoration: none;
+  color: inherit; /* Couleur du texte héritée des props */
+}
+
+.nav ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 10; /* Assurer que le menu est au-dessus des autres éléments */
+  /* Styles pour les grands écrans */
 }
 
-.menu.open {
-  transform: translateX(0); /* Menu visible */
-}
-
-.menu.closed {
-  transform: translateX(-100%); /* Menu caché hors de l'écran */
-}
-
-.menuItems {
+.nav ul li {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+}
+
+.nav ul li > * {
+  display: block;
+  text-decoration: none;
+  color: inherit; /* Couleur du texte héritée des props */
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+}
+
+.nav ul li > *:not(.active):hover {
+  background-color: #172554;
+}
+
+.nav .menu {
+  display: none;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  width: 1.8rem;
+  height: 1.5rem;
+  cursor: pointer; /* Indique que c'est cliquable */
 }
 
-.menuItem {
-  font-size: 2rem;
-  margin: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+.nav .menu span {
+  height: 0.2rem;
+  width: 100%;
+  background-color: inherit; /* Couleur de fond héritée des props */
 }
 
-.menu.open .menuItem {
-  opacity: 1;
-  transform: translateY(0);
+@media (max-width: 480px) {
+  .nav {
+    padding: 30px 20px;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    height: 100%;
+    background-color: inherit;
+    transition: transform 0.5s ease-in-out; /* Transition pour l'animation */
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin-top: 0;
+  }
+
+  .nav ul.open {
+    font-family: 'Red Hat Mono';
+    transform: translateX(100%); /* Ouvre le menu */
+  }
+
+  .nav ul.closed {
+    transform: translateX(-100%); /* Ferme le menu */
+  }
+
+  .nav .menu {
+    display: flex;
+  }
 }

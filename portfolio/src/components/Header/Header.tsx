@@ -1,66 +1,99 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './Header.module.css';
-import HiddenImages from "../HiddenImages/HiddenImages"
+import Link from 'next/link';
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
+interface HeaderProps {
+  textColor?: string;
+  menuOpenBackgroundColor?: string;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  textColor = 'white',
+  menuOpenBackgroundColor = '#0f172a',
+}) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const menuRef = useRef<HTMLUListElement>(null);
+  const menuButtonRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        menuOpen &&
+        menuRef.current &&
+        menuButtonRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        closeMenu();
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuOpen]);
+
+  const openMenu = () => {
+    setIsTransitioning(true);
+    setMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    setIsTransitioning(true);
+    setMenuOpen(false);
+  };
+
+  const onTransitionEnd = () => {
+    setIsTransitioning(false);
+  };
 
   const toggleMenu = () => {
-    if (isOpen) {
-      setIsClosing(true);
-      setTimeout(() => {
-        setIsOpen(false);
-        setIsClosing(false);
-      }, 500); // Temps pour l'animation de fermeture, doit correspondre à la durée de la transition CSS
+    if (menuOpen) {
+      closeMenu();
     } else {
-      setIsOpen(true);
+      openMenu();
     }
   };
 
   return (
-    <header className={styles.header}>
-      {/* Symbol Definitions */}
-      <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" style={{ display: 'none' }}>
-        <symbol id="line" viewBox="0 0 150 1">
-          <line y1="0.5" x2="150" y2="0.5" stroke="currentColor" strokeWidth="2" />
-        </symbol>
-        <symbol id="circle" viewBox="0 0 182 182">
-          <circle cx="91" cy="91" r="87.5" stroke="currentColor" strokeWidth="4" fill="none" />
-        </symbol>
-      </svg>
-
-      <div className={styles.container}>
-        <div
-          className={`${styles.burgerMenuWrapper} ${isOpen ? styles.open : ''} ${isClosing ? styles.closing : ''}`}
-          onClick={toggleMenu}
-        >
-          <svg className={styles.circle}>
-            <use xlinkHref="#circle" />
-          </svg>
-          <svg className={`${styles.line} ${styles.topLine}`}>
-            <use xlinkHref="#line" />
-          </svg>
-          <svg className={`${styles.line} ${styles.middleLine}`}>
-            <use xlinkHref="#line" />
-          </svg>
-          <svg className={`${styles.line} ${styles.bottomLine}`}>
-            <use xlinkHref="#line" />
-          </svg>
-        </div>
-
-        <nav className={`${styles.menu} ${isOpen ? styles.open : styles.closed}`}>
-          <ul className={styles.menuItems}>
-            <li className={styles.menuItem}>Accueil</li>
-            <li className={styles.menuItem}>A propos</li>
-            <li className={styles.menuItem}>Archives</li>
-            <li className={styles.menuItem}>Contact</li>
-          </ul>
-        </nav>
+    <nav className={styles.nav} style={{ color: textColor }}>
+      <Link href="/" passHref style={{ color: menuOpenBackgroundColor }}>
+        PEDRO GASSIES
+      </Link>
+      <div ref={menuButtonRef} className={styles.menu} onClick={toggleMenu}>
+        <span style={{ backgroundColor: menuOpenBackgroundColor }}></span>
+        <span style={{ backgroundColor: menuOpenBackgroundColor }}></span>
+        <span style={{ backgroundColor: menuOpenBackgroundColor }}></span>
       </div>
-    </header>
+      <ul
+        ref={menuRef}
+        className={menuOpen ? styles.open : styles.closed}
+        onTransitionEnd={onTransitionEnd}
+        style={{
+          backgroundColor: menuOpen || isTransitioning ? menuOpenBackgroundColor : 'transparent',
+        }}
+      >
+        <li>
+          <Link href="/projets" passHref>
+            PROJETS
+          </Link>
+        </li>
+        <li>
+          <Link href="/about" passHref>
+            A PROPOS
+          </Link>
+        </li>
+        <li>
+          <Link href="/contact" passHref>
+            CONTACT
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
 export default Header;
-

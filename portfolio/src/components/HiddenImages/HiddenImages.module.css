@@ -23,38 +23,37 @@ top:80px;
 }
 
 .imageBooki{
+  bottom:120px;
+  right:40px;
+  
+}
+
+.imageMonVieuxGrimoire{
   bottom:110px;
   left:40px;
 }
 
-.imageMonVieuxGrimoire{
-  bottom:120px;
-  right:40px;
-}
-
 .toggleButton{
-  position:absolute;
   background: #1C2226;
   color:#FFFAF4;
   border: none;
 }
 
 .buttonKasa{
-  bottom:250px;
-  left:60px;
+  margin-left: 30%;
+  margin-bottom:30px;
 }
 
 .buttonBooki{
-  top:200px;
-  right:70px; 
+  margin-left: 60%;
+  margin-top: 10px;
 }
 
 .buttonSophieBluel{
-  bottom:300px;
-  right:100px;
+  margin-left:10%;
+  margin-top:60px;
 }
 
 .buttonMonVieuxGrimoire{
-  left:80px;
-  top:250px;
+  margin-left:70%;
 }
