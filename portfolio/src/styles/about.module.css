@@ -1,9 +1,11 @@
 .titre{
     width: 100px;
-    margin-left: 16px;
     padding: 3px;
 }
 .about{
     background-color: #1C2226;
 }
 
+.body{
+    margin: 0 5%;
+}

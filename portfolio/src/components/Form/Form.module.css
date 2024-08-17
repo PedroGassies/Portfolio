@@ -13,7 +13,7 @@
 }
 
 .field {
-    width:95%;
+    width:100%;
     margin:0 auto;
     background: none;
     border-style: none;
@@ -42,7 +42,9 @@
     color:#CAD2C5;
     font-family: 'Aspekta';
     font-size: 24px;
-    line-height: 3;
+    line-height: 5;
+    margin-bottom:20px;
+
 }
 
 .send picture{

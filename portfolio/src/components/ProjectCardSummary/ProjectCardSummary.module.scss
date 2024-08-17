@@ -6,8 +6,12 @@
             text-decoration: none; 
             margin-bottom: 8px;
         }
+        .image{
+            object-fit: cover;
+        }
         image{
             width:100%;
+            
         }
         .details{
             display: flex;

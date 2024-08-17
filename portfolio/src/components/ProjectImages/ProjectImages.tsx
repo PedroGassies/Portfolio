@@ -26,7 +26,7 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
         <div className={styles.image}>
             <Slider {...settings}>
             {images.map((image, index) => (
-                <Image key={index} src={image} alt={title} width={320} height={184} />
+                <Image key={index} src={image} alt={title} width={353} height={184} />
             ))}
             </Slider>
         </div>

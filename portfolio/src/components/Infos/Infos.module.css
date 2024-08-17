@@ -1,7 +1,4 @@
-.infos{
-    margin-left:16px;
-    width: 90%;
-}
+
 .skills{
     display: flex;
     flex-wrap: wrap;
@@ -13,8 +10,6 @@
 }
 
 .infos p{
-
-    margin: 0;
     font-family: "Red Hat Mono";
     color:#CAD2C5;
     font-size:16px;
@@ -59,9 +54,7 @@
     letter-spacing: 1px;
     text-decoration: none;
 }
-.links a picture img{
-    
-}
+
 .me{
     margin-bottom:8px;
 }
