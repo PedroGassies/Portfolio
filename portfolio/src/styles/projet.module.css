@@ -27,3 +27,10 @@ width:82px;
 .body{
     margin:0 5%;
 }
+
+@media (min-width: 1024px) {
+    .projet h1{
+        height: auto;
+    }
+    
+}

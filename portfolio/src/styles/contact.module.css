@@ -22,3 +22,28 @@
 .text a{
     color:#CAD2C5;
 }
+
+@media (min-width: 1024px) {
+    .body{
+        display: flex;
+        justify-content: space-between;
+    }
+    .phrases{
+        width: 45%;
+    }
+    .form{
+        margin-top: 15px;;
+        width: 50%;
+    }
+    .phrases h1{
+        line-height: 60px;
+        margin:0;
+    }
+    .phrases p{
+        width:85%;
+        font-size: 20px;
+        line-height: auto;
+    }
+
+  }
+  

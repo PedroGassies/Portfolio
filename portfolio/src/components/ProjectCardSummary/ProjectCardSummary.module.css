@@ -1,0 +1,76 @@
+.link {
+    text-decoration: none;
+}
+
+.link .card {
+    margin-bottom: 24px;
+}
+
+.link .card p,
+.link .card h3 {
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.link .card h3 {
+    width: 40%;
+}
+
+.link .card .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link .card .details .title {
+    font-weight: 300;
+    color: #52796F;
+    font-size: 16px;
+}
+
+.link .card .details .infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link .card .details .infos .skills {
+    display: flex;
+    margin-right: 32px;
+}
+
+.link .card .details .infos .skills .skill {
+    color: #52796F;
+    margin-right: 4px;
+}
+
+.link .card .details .infos .year {
+    color: #52796F;
+}
+
+@media (min-width: 1024px) {
+    .link .card .imageContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Position de départ au centre */
+        pointer-events: none;
+        transition: transform 0.1s ease-out;
+        opacity: 0; /* Initialement cachée */
+    }
+
+    .link .card:hover .imageContainer {
+        opacity: 1;
+    }
+
+    .image {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    .link .card .details .title, .skills, .year {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    
+}

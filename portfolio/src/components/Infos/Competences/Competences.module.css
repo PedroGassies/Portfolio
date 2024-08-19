@@ -27,5 +27,15 @@
     color:#52796F;
     font-size: 20px;
     font-family: "Aspekta";
-    font-weight: 300;
+    font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+    .competences{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .list{
+        margin-top: 9px;
+    }
 }

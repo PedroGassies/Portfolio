@@ -1,4 +1,10 @@
 .title{
     font-size: 24px;
-    
+    font-variation-settings: "wght" 300;
 }
+
+@media (min-width: 1024px) {
+    .title{
+        font-size: 64px;
+    }
+  }

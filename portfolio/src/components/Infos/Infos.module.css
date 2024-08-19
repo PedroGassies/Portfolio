@@ -2,7 +2,7 @@
 .skills{
     display: flex;
     flex-wrap: wrap;
-
+    margin-bottom:48px;
 }
 .balise{
     padding:2px 5px;
@@ -20,16 +20,15 @@
     font-size: 24px;
     font-weight: 300;
     color:#CAD2C5;
-
     margin:16px 0;
-    line-height: 40px;;
+    line-height: auto;
 }
 
 .infos h2{
     font-size: 20px;
     color:#CAD2C5;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 400;
 }
 
 .competences{
@@ -48,13 +47,77 @@
     margin-bottom: 50px;
 }
 .links a{
+    display: flex;
     margin:8px 0;
     font-weight: 300;
     color: #CAD2C5;
-    letter-spacing: 1px;
     text-decoration: none;
 }
 
-.me{
-    margin-bottom:8px;
+.me img{
+    width: 147px;
+    height: 191px;
+    margin-bottom:44px;
 }
+
+.links a picture{
+    margin-left: 8px;
+    display: block;
+}
+@media (min-width: 1024px) {
+    .global {
+      display: grid;
+      grid-template-columns: 70% 30%; 
+      grid-template-rows: 90px auto;
+      max-height: 200px;
+      row-gap:15px;
+    }
+  
+    .skills {
+      grid-column: 1;
+      grid-row: 1; 
+      width: 100%; 
+      margin-bottom: 0;
+    }
+  
+    .links {
+      grid-column: 1; 
+      grid-row: 2; 
+      width: 100%; 
+    }
+  
+    .me {
+      grid-column: 2; 
+      grid-row: 1 / span 2; 
+      width: 100%; /* Assure que la largeur du conteneur est 100% de la colonne */
+      display: flex; /* Utiliser flex pour aligner l'image */
+      justify-content: flex-end; /* Aligner le contenu à droite */
+    }
+  
+    .me img {
+      width: 188px;
+      height: 222px;
+      padding-right: 0.5rem;
+    }
+  
+    .infos p {
+      width: 92%;
+    }
+  
+    .infos h1 {
+      font-size: 64px;
+    }
+  
+    .balise {
+      font-size: 24px;
+    }
+  
+    .competences {
+      margin: 24px 0;
+    }
+  
+    .competences p {
+      width: 70%;
+    }
+  }
+  

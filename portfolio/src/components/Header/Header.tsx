@@ -112,7 +112,7 @@ export const Header: React.FC<HeaderProps> = ({
               color: isHydrated && menuOpen ? mainColor : secondaryColor,
             }}
           >
-            A PROPOS
+            À PROPOS
           </Link>
         </li>
         <li>

@@ -48,5 +48,22 @@
 }
 
 .send picture{
+    margin-top:1px;
     margin-left: 24px;
+}
+
+@media (min-width: 1024px) {
+    .send{
+        font-size: 48px;
+        line-height: 3;
+    }
+    .send picture{
+        margin-top: 5px;
+    }
+    .send img{
+        content: url('../../../public/assets/arrowbig.png');
+    }
+    .field{
+        padding-bottom: 15px;
+    }
 }

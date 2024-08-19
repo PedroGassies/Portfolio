@@ -9,3 +9,11 @@ body {
 img{
   object-fit: cover;
 }
+
+@media (min-width: 1024px) {
+  html,body{
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+}

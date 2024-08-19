@@ -12,7 +12,7 @@ const AboutPage = () => {
             <Header mainColor="#1C2226"
             secondaryColor="#FFFAF4"/>
             <main className={styles.body}>
-            <Balise className={styles.titre} textColor='#1C2226' backgroundColor='#CAD2C5' content='<a-propos>'></Balise>
+            <Balise className={styles.titre} textColor='#1C2226' backgroundColor='#CAD2C5' content='<à-propos>'></Balise>
             <Infos />
             </main>
             <Footer textColor="#CAD2C5" />

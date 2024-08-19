@@ -7,13 +7,14 @@
   color: inherit; /* Couleur du texte héritée des props */
   position: sticky;
   top: 0;
+  padding:10px 60px;
   z-index: 1000; /* Assure que le menu reste au-dessus des autres éléments */
   box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
 .nav > :first-child {
-  font-size: 1.5rem;
-  font-weight: light;
+  font-size: 20px;
+  font-variation-settings: "wght" 400;
   text-decoration: none;
   color: inherit; /* Couleur du texte héritée des props */
 }
@@ -40,13 +41,13 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 1.8rem;
-  height: 1.5rem;
+  width: 1.1rem;
+  height: 0.95rem;
   cursor: pointer; /* Indique que c'est cliquable */
 }
 
 .nav .menu span {
-  height: 0.2rem;
+  height: 0.15rem;
   width: 100%;
   background-color: inherit; /* Couleur de fond héritée des props */
 }
@@ -96,8 +97,9 @@
     display: flex;
   }
   .nav ul.open, .nav ul.closed{
-    font-family: 'Red Hat Mono';
-    font-size: 24px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-variation-settings: "wght" 400;
     align-items: center;
   }
   

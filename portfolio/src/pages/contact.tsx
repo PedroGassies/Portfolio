@@ -12,9 +12,11 @@ const ContactPage: React.FC = () => {
             <Header mainColor="#52796F"
             secondaryColor="#CAD2C5"/>
         <main className={styles.body}>
-            <Titre titre="FAISONS QUELQUE CHOSE D'INCROYABLE ENSEMBLE" />
+            <div className={styles.phrases}>
+            <Titre titre="Faisons quelque chose d'incroyable ensemble" />
             <p className={styles.text}>N'hésitez pas à me contacter pour toute demande de renseignements, de collaboration, d'infos complémentaire ou juste pour me dire bonjour par mail ici <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via ce formulaire.</p>
-            <Form />
+            </div>
+            <div className={styles.form}><Form /></div>
         </main>  
         <Footer textColor="#CAD2C5"/> 
         </div>

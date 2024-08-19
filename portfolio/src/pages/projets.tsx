@@ -29,9 +29,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
     return {
-        props: {
-            projects,
-        },
+        props: {projects},
     };
 };
 

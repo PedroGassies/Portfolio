@@ -5,7 +5,8 @@
 .links a{
     margin-top:16px;
     text-decoration: none;
-    color:#52796F
+    color:#52796F;
+    display: flex;
 }
 
 .titre{
@@ -17,3 +18,36 @@
     font-size: 20px;
 }
 
+.links a picture{
+    display: block;
+    margin-left: 8px;
+}
+
+.links a picture img{
+    margin-top: 3px;
+}
+
+@media (min-width: 1024px) {
+    .titre{
+        padding: 0;
+        width:96px;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .datas{
+        display:flex;
+        justify-content: space-between;
+    }
+    .datas p{
+        width:50%;
+        font-size: 20px;
+        line-height: 20px;
+        padding: 20px 0;
+        border-right:#52796F 1px solid;
+        }
+        .links a {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+}

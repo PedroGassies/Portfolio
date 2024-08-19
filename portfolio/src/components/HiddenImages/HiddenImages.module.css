@@ -1,52 +1,61 @@
-  .image {
-    position: absolute;
-    width: 40%; 
-    height: auto; /* Conserver les proportions d'origine */
-  }
-  
-
-.imageSophieBluel{
-  right:50px;
-  top:80px;
+.image {
+  position: absolute;
+  width: 40%; 
+  height: auto;
+  transition: transform 0.2s ease-out; /* Transition douce pour le déplacement */
 }
 
-.imageKasa{
-left:45px;
-top:80px;  
+/* Position des images */
+.imageSophieBluel {
+  right: 50px;
+  top: 80px;
 }
 
-.imageBooki{
-  bottom:120px;
-  right:40px;
-  
+.imageKasa {
+  left: 45px;
+  top: 80px;
 }
 
-.imageMonVieuxGrimoire{
-  bottom:110px;
-  left:40px;
+.imageBooki {
+  bottom: 120px;
+  right: 40px;
 }
 
-.toggleButton{
+.imageMonVieuxGrimoire {
+  bottom: 110px;
+  left: 40px;
+}
+
+/* Styles des boutons */
+.toggleButton {
   background: #1C2226;
-  color:#FFFAF4;
+  color: #FFFAF4;
   border: none;
+  cursor: pointer;
 }
 
-.buttonKasa{
+.buttonKasa {
   margin-left: 30%;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
-.buttonBooki{
+.buttonBooki {
   margin-left: 60%;
   margin-top: 10px;
 }
 
-.buttonSophieBluel{
-  margin-left:10%;
-  margin-top:60px;
+.buttonSophieBluel {
+  margin-left: 10%;
+  margin-top: 60px;
 }
 
-.buttonMonVieuxGrimoire{
-  margin-left:70%;
+.buttonMonVieuxGrimoire {
+  margin-left: 70%;
+}
+
+
+@media (min-width: 1024px) {
+  .image{
+    width: 20%;
+  }
 }

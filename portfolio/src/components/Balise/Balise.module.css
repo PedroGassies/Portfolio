@@ -5,3 +5,10 @@
     border-radius:5px;
 }
 
+@media (min-width: 1024px) {
+    .balise{
+        font-size: 20px;
+        line-height: 30px;
+    }
+  }
+  
