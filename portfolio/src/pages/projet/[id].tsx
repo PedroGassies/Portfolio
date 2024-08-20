@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import Projet from '../../components/ProjectCard/ProjectCard'
 import projects from "../../data/projects.json";
+import Balise from '../../components/Balise/Balise';
 import {Project} from "../../data/projectTypes";
 
 interface ProjectPageProps {
@@ -16,6 +17,7 @@ interface ProjectPageProps {
         <Header mainColor="#CAD2C5"
             secondaryColor="#52796F"/>
         <main className={styles.body}>
+        <Balise className={styles.titre} textColor='#CAD2C5' backgroundColor='#52796F' content='<projet>' />
           <Projet project={project} />
         </main>
         <Footer textColor="#52796F" />

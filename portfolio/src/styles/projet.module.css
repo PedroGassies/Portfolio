@@ -3,14 +3,11 @@
 }
 .titre{
 align-items: center;
-height:25px;
-padding-top:5px;
-margin-left: 16px;
-width:82px;
+height:auto;    
+width:77px;
 }
 
 .projet h1{
-    margin-top:8px;
     margin-bottom: 24px;
     color:#52796F;
     border-bottom: #52796F 1px solid;
@@ -30,7 +27,18 @@ width:82px;
 
 @media (min-width: 1024px) {
     .projet h1{
+        margin-top: 15px;
         height: auto;
+    }
+    .projet p{
+        margin:0
+    }
+    .titre{
+        padding: 0;
+        width:96px;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
     }
     
 }

@@ -2,20 +2,20 @@
     {
       "id": 1,
       "title": "BOOKI",
-      "description": "Ce projet a été fait dans le cadre de ma formation Développeur web chez OpenClassrooms. Le projet Booki est un projet de création d'une interface web pour une agence de voyage. Il implique la découpe et l'intégration d'une maquette Figma en utilisant HTML et CSS. L'objectif principal est de rendre le site responsive et compatible avec différents appareils et résolutions d'écran.",
+      "description": "Ce projet, réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, consiste en la création d'une interface web pour une agence de voyage appelée Booki. Il s'agit de découper et d'intégrer une maquette Figma en utilisant HTML et CSS, tout en assurant la responsivité du site pour une compatibilité optimale sur divers appareils et résolutions d'écran.",
       "skills": [
         { "name": "HTML", "logo": "/assets/logo/html.png" },
         { "name": "CSS", "logo": "/assets/logo/css.png" }
       ],
       "websiteLink": "",
       "githubLink": "https://github.com/PedroGassies/Projet_Deux_Gassies_Pedro.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
+      "images": ["/assets/rectangle.png", "/assets/mockup.jpg", "/assets/mockup.jpg"],
      "year":2024
     },
     {
       "id": 2,
       "title": "SOPHIE BLUEL",
-      "description": "Ce projet a été fait dans le cadre de ma formation Développeur web chez OpenClassrooms. Dans ce projet de développement Front-End, j'ai travaillé sur la création d'un site portfolio pour une architecte d'intérieur. J'ai mis en place une galerie dynamique en utilisant une API pour récupérer les données des projets et j'ai implémenté des filtres pour trier les projets par catégorie. J'ai également développé la page de connexion de l'administrateur avec un système d'authentification via un formulaire, ainsi qu'une modale permettant l'ajout et la suppression de projets de manière dynamique. J'ai veillé à assurer le bon fonctionnement de l'ensemble du projet en traitant les erreurs dans les formulaires.",
+      "description": "Ce projet, réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, porte sur la création d'un site portfolio pour une architecte d'intérieur. Il comprend une galerie dynamique alimentée par une API, avec des filtres pour trier les projets par catégorie. La page de connexion pour l'administrateur inclut un système d'authentification et une modale pour gérer l'ajout et la suppression de projets. Une attention particulière a été portée à la gestion des erreurs dans les formulaires pour garantir le bon fonctionnement du site.",
       "skills": [
         { "name": "JavaScript", "logo": "/assets/logo/javascript.png" }
       ],
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "title": "KASA",
-      "description": "Ce projet a été fait dans le cadre de ma formation Développeur web chez OpenClassrooms. Le projet Kasa est une refonte d'un site web de location immobilière développé en utilisant React. Avec une interface front-end moderne et fluide, l'application offre une expérience utilisateur optimale. En exploitant les composants React et avec react router, l'application permet de naviguer entre diverses pages, notamment la page d'accueil, la galerie des annonces et la page détaillée des propriétés. En développant ce projet, j'ai également mis en place des animations et utilisé SASS pour une conception CSS avancée.",
+      "description": "Réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, ce projet Kasa est une refonte d'un site de location immobilière en React. L'application propose une interface moderne et fluide, optimisant l'expérience utilisateur. Elle permet de naviguer entre plusieurs pages, telles que l'accueil, la galerie des annonces et les détails des propriétés, grâce à React Router. Le projet intègre également des animations et utilise SASS pour une conception CSS avancée.",
       "skills": [
         { "name": "React", "logo": "/assets/logo/react.png" },
         { "name": "JavaScript", "logo": "/assets/logo/javascript.png" },
@@ -35,7 +35,7 @@
       ],
       "websiteLink": "",
       "githubLink": "https://github.com/PedroGassies/Kasa.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
+      "images": ["/assets/rectangle.png", "/assets/mockup.jpg", "/assets/mockup.jpg"],
       "year":2024
     },
     {

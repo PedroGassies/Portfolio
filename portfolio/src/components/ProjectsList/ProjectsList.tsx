@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectSummary from '../ProjectCardSummary/ProjectCardSummary';
 import { Project } from '../../data/projectTypes';
-import styles from './ProjetctsList.module.css';
+import styles from './ProjectsList.module.css';
 
 interface ProjectsListProps {
     projects: Project[];

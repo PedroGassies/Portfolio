@@ -13,3 +13,17 @@
 .slick-slider{
     width:100%;
 }
+.imagecontainer{
+    margin-top: 24px;
+}
+
+@media (min-width: 1024px) {
+  .imageList{
+    width:80%;
+    display: flex;
+    gap:20px;
+  }
+  .imageItem{
+    width: 30%;
+  }
+}

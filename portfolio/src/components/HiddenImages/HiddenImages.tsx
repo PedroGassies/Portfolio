@@ -13,7 +13,23 @@ interface TypeToggleImageProps {
 const HiddenImages: React.FC<TypeToggleImageProps> = ({ items }) => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 });
-  const isMobile = window.innerWidth < 768; // Détecter si on est sur un mobile
+  const [isMobile, setIsMobile] = useState(false); // Ajout d'un état pour détecter si on est sur mobile
+
+  useEffect(() => {
+    // Vérifier que l'on est bien côté client
+    const checkIfMobile = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < 768);
+      }
+    };
+
+    checkIfMobile(); // Exécuter une première fois
+    window.addEventListener('resize', checkIfMobile); // Mettre à jour lors du redimensionnement
+
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, index: number) => {
     if (!isMobile) { // Ne se déclenche que sur bureau
@@ -48,8 +64,10 @@ const HiddenImages: React.FC<TypeToggleImageProps> = ({ items }) => {
       setVisibleIndex(null); // Réinitialiser l'état lors du redimensionnement de la fenêtre
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   return (
@@ -82,3 +100,4 @@ const HiddenImages: React.FC<TypeToggleImageProps> = ({ items }) => {
 };
 
 export default HiddenImages;
+

@@ -4,9 +4,7 @@
 .titre{
     width:90px;
     font-size: 16px;
-    padding-top:3px;
-    height:24px;
-    margin-bottom: 8px;;
+    height:auto;
 }
 
 .body{
@@ -17,7 +15,6 @@
 @media (min-width: 1024px) {
     .titre{
         width: 108px;
-        height: 30px;
         line-height: 30px;
         font-size: 20px;
     }

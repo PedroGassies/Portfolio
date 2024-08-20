@@ -9,7 +9,7 @@ export const imageItems = [
     },
     { 
       buttonText: '<.>', 
-      imageSrc: './assets/mockup.jpg', 
+      imageSrc: './assets/rectangle.jpg', 
       buttonClassName: 'buttonSophieBluel', 
       imageClassName: 'imageSophieBluel' 
     },
@@ -21,7 +21,7 @@ export const imageItems = [
     },
     { 
         buttonText: '<.>', 
-        imageSrc: './assets/mockup.jpg', 
+        imageSrc: './assets/rectangle.jpg', 
         buttonClassName: 'buttonMonVieuxGrimoire', 
         imageClassName: 'imageMonVieuxGrimoire' 
       },

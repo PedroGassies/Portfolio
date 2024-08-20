@@ -22,7 +22,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
             <ProjectsList projects={projects} />
             </main>
             <Footer textColor='#52796F'/>
-            
         </div>
     );
 };

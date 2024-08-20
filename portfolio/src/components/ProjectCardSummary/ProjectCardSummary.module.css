@@ -2,7 +2,7 @@
     text-decoration: none;
 }
 
-.link .card {
+.link .card { 
     margin-bottom: 24px;
 }
 
@@ -12,8 +12,12 @@
     margin-bottom: 8px;
 }
 
-.link .card h3 {
-    width: 40%;
+.link .card .image {
+    object-fit: cover;
+}
+
+.link .card image {
+    width: 100%;
 }
 
 .link .card .details {
@@ -21,8 +25,9 @@
     justify-content: space-between;
 }
 
-.link .card .details .title {
+.title {
     font-weight: 300;
+    width:35%;
     color: #52796F;
     font-size: 16px;
 }
@@ -48,29 +53,18 @@
 }
 
 @media (min-width: 1024px) {
-    .link .card .imageContainer {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Position de départ au centre */
-        pointer-events: none;
-        transition: transform 0.1s ease-out;
-        opacity: 0; /* Initialement cachée */
-    }
-
-    .link .card:hover .imageContainer {
-        opacity: 1;
-    }
-
-    .image {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-    }
-    .link .card .details .title, .skills, .year {
-        font-size: 40px;
+    .details h3, .skill, .year{
+        font-size: 32px;
+        margin-top:0;
         font-weight: 300;
     }
-
+    .image{
+        position:absolute;
+        bottom:32%;
+        left:40%;
+        width:285px;
+        height:180px;
+        opacity:0;
+    }
     
 }
