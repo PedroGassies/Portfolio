@@ -17,13 +17,13 @@
     margin-top: 24px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .imageList{
     width:80%;
     display: flex;
     gap:20px;
   }
   .imageItem{
-    width: 30%;
+    width: 25%;
   }
 }

@@ -24,6 +24,12 @@
 }
 
 @media (min-width: 1024px) {
+    .contact{
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+      }
     .body{
         display: flex;
         justify-content: space-between;

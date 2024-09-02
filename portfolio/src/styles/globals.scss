@@ -12,11 +12,17 @@ img{
 
 @media (min-width: 1024px) {
   html,body{
+    height:100vh;
     max-height: 100vh;
     overflow: hidden;
   }
   h1{
     font-size: 48px;
   }
-  
+  .container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
 }

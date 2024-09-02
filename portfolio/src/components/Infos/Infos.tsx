@@ -33,8 +33,8 @@ const Infos = () => {
       </picture>
     <div className={styles.links}>
     <a href="/projets">VOIR MES PROJETS <picture><img src='./assets/arrow.png' alt=""></img> </picture>  </a>
-    <a href="">CV <picture><img src='./assets/arrow.png' alt=""></img> </picture></a>
-    <a href="">LINKEDIN <picture><img src='./assets/arrow.png' alt=""></img> </picture> </a>
+    <a href="./assets/CV.pdf" target="_blank" rel="noopener noreferrer">CV <picture><img src='./assets/arrow.png' alt=""></img> </picture></a>
+    <a href="https://www.linkedin.com/in/pedro-gassies-1a1681194/" target="_blank" rel="noopener noreferrer"> LINKEDIN <picture><img src='./assets/arrow.png' alt=""></img> </picture> </a>
     </div> 
     </div>
     </div>

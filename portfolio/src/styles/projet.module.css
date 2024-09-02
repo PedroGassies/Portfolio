@@ -26,6 +26,12 @@ width:77px;
 }
 
 @media (min-width: 1024px) {
+    .projet{
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+      }
     .projet h1{
         margin-top: 15px;
         height: auto;

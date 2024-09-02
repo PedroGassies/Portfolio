@@ -12,7 +12,7 @@ interface ProjectImagesProps {
 }
 
 const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number | null>(null); // Initialise à null
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState<string | null>(null);
 
@@ -21,10 +21,36 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== "undefined") {
+      // Vérifie que `window` est défini
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
   }, []);
+
+  const settingsBase: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    centerMode: true, // Active le mode centrage
+    centerPadding: '0px', // Pas de padding autour des images
+  };
+
+  const mobileSettings: Settings = {
+    ...settingsBase,
+    slidesToShow: 1,
+  };
 
   const openModal = (image: string) => {
     setCurrentImage(image);
@@ -36,56 +62,31 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
     setCurrentImage(null);
   };
 
-  // Définir les paramètres du carousel en fonction de la largeur de l'écran
-  const getSliderSettings = (): Settings => {
-    if (windowWidth < 768) {
-      return {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-      };
-    } else if (windowWidth >= 768 && windowWidth <= 1024) {
-      return {
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 3,
-        speed: 500,
-        arrows: false,
-      };
-    } else {
-      return {
-        // Paramètres pour écrans plus larges (> 1024px) - désactivation du carousel
-        dots: false,
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        arrows: false,
-      };
-    }
-  };
-
   return (
     <div className={styles.imageContainer}>
-      {windowWidth < 1024 ? (
-        <Slider {...getSliderSettings()}>
-          {images.map((image, index) => (
-            <div key={index} className={styles.slide}>
-              <Image src={image} alt={title} layout="responsive" width={windowWidth < 768 ? 353 : 275} height={windowWidth < 768 ? 184 : 206} />
-            </div>
-          ))}
-        </Slider>
+      {windowWidth && windowWidth < 768 ? (
+        <Slider {...mobileSettings}>
+        {images.map((image, index) => (
+          <div key={index} style={{ textAlign: 'center' }}>
+            <Image 
+              src={image} 
+              alt={title} 
+              width={353} 
+              height={184} 
+              style={{ margin: '0 auto' }} // Centre l'image dans son conteneur
+            />
+          </div>
+        ))}
+      </Slider>
       ) : (
         <div className={styles.imageList}>
           {images.map((image, index) => (
-            <div key={index} className={styles.imageItem} onClick={() => openModal(image)} style={{ cursor: 'pointer' }}>
+            <div
+              key={index}
+              className={styles.imageItem}
+              onClick={() => openModal(image)}
+              style={{ cursor: 'pointer' }}
+            >
               <Image src={image} alt={title} layout="responsive" width={275} height={206} />
             </div>
           ))}
@@ -99,6 +100,3 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
 };
 
 export default ProjectImages;
-
-
-

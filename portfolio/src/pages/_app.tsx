@@ -3,8 +3,13 @@ import '../styles/globals.scss';
 
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
+  //création state pour définir la couleur 
   return (
-    <Component {...pageProps} />
+    //appeler header ici
+    <div className='container'>
+    <Component {...pageProps} /> 
+    </div> 
+    //appeler footer ici 
   );
 };
 

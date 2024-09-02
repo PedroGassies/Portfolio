@@ -58,6 +58,9 @@
         margin-top:0;
         font-weight: 300;
     }
+    .details h3{
+        width:35%;
+    }
     .image{
         position:absolute;
         bottom:32%;

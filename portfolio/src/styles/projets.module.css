@@ -13,6 +13,12 @@
 
 
 @media (min-width: 1024px) {
+    .projets{
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+      }
     .titre{
         width: 108px;
         line-height: 30px;

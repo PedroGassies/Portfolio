@@ -4,3 +4,8 @@
   text-transform: uppercase;
   font-size: 12px;
 }
+@media (min-width: 1024px) {
+  .footer{
+    padding:15px;
+  }
+}

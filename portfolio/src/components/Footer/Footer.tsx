@@ -13,3 +13,5 @@ const Footer: React.FC<FooterProps> = ({ textColor }) => {
 };
 
 export default Footer;
+
+//création state pour passer aux enfants un prop qui change la couleur 

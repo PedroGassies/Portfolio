@@ -11,3 +11,16 @@
     padding: 80px 0;
     margin-left: 40px;
 }
+
+@media (min-width: 1024px) {
+    .TyppingEffect,.sentence{
+        font-size:32px;
+        line-height: 48px;
+    }
+    .type{
+        width:40%;
+        margin-left: auto;
+        padding:0;
+        padding-top: 110px;
+    }
+}
