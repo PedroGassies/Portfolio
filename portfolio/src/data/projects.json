@@ -7,7 +7,7 @@
         { "name": "HTML", "logo": "/assets/logo/html.png" },
         { "name": "CSS", "logo": "/assets/logo/css.png" }
       ],
-      "websiteLink": "",
+      "websiteLink": "https://pedrogassies.github.io/Projet_Deux_Gassies_Pedro/",
       "githubLink": "https://github.com/PedroGassies/Projet_Deux_Gassies_Pedro.git",
       "images": ["/assets/rectangle.png", "/assets/mockup.jpg", "/assets/mockup.jpg"],
      "year":2024

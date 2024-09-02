@@ -18,7 +18,7 @@ const Projet: React.FC<ProjetProps> = ({ project }) => {
                 <div className={styles.informations}>
                 <Competences skills={project.skills}/>
                 <div className={styles.links}>
-                    <a href={project.websiteLink}>VOIR LE SITE <picture><img src='../../../assets/greenarrow.png' alt=""></img> </picture></a>
+                    <a href={project.websiteLink} target="_blank">VOIR LE SITE <picture><img src='../../../assets/greenarrow.png' alt=""></img> </picture></a>
                     <a href={project.githubLink}>VOIR LE REPOS GITHUB <picture><img src='../../../assets/greenarrow.png' alt=""></img> </picture></a>
                 </div>
                 </div>
