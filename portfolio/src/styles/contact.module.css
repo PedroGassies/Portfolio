@@ -9,7 +9,9 @@
     color: #CAD2C5;
     line-height: 30px;
 }
-
+.titre{
+    width: 90px;
+}
 .text{
     
     font-family: 'Red Hat Mono';
@@ -24,6 +26,9 @@
 }
 
 @media (min-width: 1024px) {
+    .titre{
+        width: 111px;
+    }
     .contact{
         min-height: 100vh;
         display: grid;
@@ -35,20 +40,24 @@
         justify-content: space-between;
     }
     .phrases{
-        width: 45%;
+        width: 75%;
     }
     .form{
-        margin-top: 15px;;
-        width: 50%;
+        margin-top: 15px;
+        width: 100%;
+    }
+    .width{
+        width:100%;
     }
     .phrases h1{
         line-height: 60px;
         margin:0;
+        margin:16px 0;
     }
     .phrases p{
         width:85%;
         font-size: 20px;
-        line-height: auto;
+        line-height: 32px;
     }
 
   }
