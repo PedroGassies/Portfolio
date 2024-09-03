@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
         <main className={styles.body}>
             <div className={styles.phrases}>
             <Titre titre="Faisons quelque chose d'incroyable ensemble" />
-            <p className={styles.text}>N'hésitez pas à me contacter pour toute demande de renseignements, de collaboration, d'infos complémentaire ou juste pour me dire bonjour par mail ici <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via ce formulaire.</p>
+            <p className={styles.text}>N&apos;hésitez pas à me contacter pour toute demande de renseignements, de collaboration, d&apos;infos complémentaire ou juste pour me dire bonjour par mail ici <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via ce formulaire.</p>
             </div>
             <div className={styles.form}><Form /></div>
         </main>  

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import styles from './Infos.module.css';
 import Balise from '../Balise/Balise';
 import Titre from "../Title/Title"
@@ -8,7 +9,7 @@ const Infos = () => {
     <div className={styles.infos}>
         <div className={styles.presentation}></div>
         <Titre titre={"Un peu plus sur moi"}></Titre>
-        <p>Je suis un web développeur de 24 ans résidant sur Paris spécialisé en Front-End. Mes compétences englobent principalement le développement avec React, HTML, CSS et JavaScript. Avide de nouveaux défis, mon objectif est de concevoir des expériences utilisateur intuitives et innovantes. N'hésitez pas à me contacter pour toute demande par mail <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via la page <a href='/contact'>contact</a>.</p>
+        <p>Je suis un web développeur de 24 ans résidant sur Paris spécialisé en Front-End. Mes compétences englobent principalement le développement avec React, HTML, CSS et JavaScript. Avide de nouveaux défis, mon objectif est de concevoir des expériences utilisateur intuitives et innovantes. N&apos;hésitez pas à me contacter pour toute demande par mail <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via la page <a href='/contact'>contact</a>.</p>
       <div className={styles.competences}>
       <h2>Compétences</h2>
       <div className={styles.global}>
@@ -32,9 +33,9 @@ const Infos = () => {
       />
       </picture>
     <div className={styles.links}>
-    <a href="/projets">VOIR MES PROJETS <picture><img src='./assets/arrow.png' alt=""></img> </picture>  </a>
-    <a href="./assets/CV.pdf" target="_blank" rel="noopener noreferrer">CV <picture><img src='./assets/arrow.png' alt=""></img> </picture></a>
-    <a href="https://www.linkedin.com/in/pedro-gassies-1a1681194/" target="_blank" rel="noopener noreferrer"> LINKEDIN <picture><img src='./assets/arrow.png' alt=""></img> </picture> </a>
+    <Link href="/projets">VOIR MES PROJETS <picture><img src='./assets/arrow.png' alt=""></img> </picture>  </Link>
+    <Link href="./assets/CV.pdf" target="_blank" rel="noopener noreferrer">CV <picture><img src='./assets/arrow.png' alt=""></img> </picture></Link>
+    <Link href="https://www.linkedin.com/in/pedro-gassies-1a1681194/" target="_blank" rel="noopener noreferrer"> LINKEDIN <picture><img src='./assets/arrow.png' alt=""></img> </picture> </Link>
     </div> 
     </div>
     </div>
