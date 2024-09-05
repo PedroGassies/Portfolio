@@ -42,14 +42,17 @@
         padding: 10px 25px 0 0 ;
         border-right:#52796F 1px solid;
         }
-        .links a {
-            margin-top: 0;
-            margin-bottom: 16px;
-        }
-        .informations{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            width:45%;
-        }
+    .links{
+        margin-top: 0;
+    }
+    .links a {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    .informations{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width:45%;
+    }
 }

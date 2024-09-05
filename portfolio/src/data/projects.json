@@ -33,7 +33,7 @@
         { "name": "JavaScript", "logo": "/assets/logo/javascript.png" },
         { "name": "SASS", "logo": "/assets/logo/sass.png" }
       ],
-      "websiteLink": "",
+      "websiteLink": "https://kasa-eight-dun.vercel.app/Home",
       "githubLink": "https://github.com/PedroGassies/Kasa.git",
       "images": ["/assets/rectangle.png", "/assets/mockup.jpg", "/assets/mockup.jpg"],
       "year":2024
