@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
             secondaryColor="#CAD2C5"/>
         <main className={styles.body}>
             <div className={styles.width}>
-            <Balise className={styles.titre} textColor='#1C2226' backgroundColor='#CAD2C5' content='<contact>'></Balise>
+            <Balise className={styles.titre} textColor='#52796f' backgroundColor='#CAD2C5' content='<contact>'></Balise>
             <div className={styles.phrases}>
             <Titre titre="Faisons quelque chose d'incroyable ensemble" />
             <p className={styles.text}>N&apos;hésitez pas à me contacter pour toute demande de renseignements, de collaboration, d&apos;infos complémentaire ou juste pour me dire bonjour par mail ici <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via ce formulaire.</p>
