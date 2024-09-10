@@ -22,7 +22,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ open, imageSrc, imageAlt, onClo
       aria-describedby="modal-modal-description"
     >
       <Box className={styles.modal}>
-        <Image src={imageSrc} alt={imageAlt} layout="responsive" width={997} height={613} />
+        <Image src={imageSrc} alt={imageAlt} style={{ objectFit: 'cover' }} width={600} height={450} />
       </Box>
     </Modal>
   );

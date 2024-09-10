@@ -19,9 +19,10 @@
 
 @media (min-width: 768px) {
   .imageList{
-    width:80%;
+    width: 80%;
     display: flex;
     gap:20px;
+    
   }
   .imageItem{
     width: 25%;

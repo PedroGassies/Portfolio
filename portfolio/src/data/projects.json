@@ -1,55 +1,67 @@
 [
-    {
-      "id": 1,
-      "title": "BOOKI",
-      "description": "Ce projet, réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, consiste en la création d'une interface web pour une agence de voyage appelée Booki. Il s'agit de découper et d'intégrer une maquette Figma en utilisant HTML et CSS, tout en assurant la responsivité du site pour une compatibilité optimale sur divers appareils et résolutions d'écran.",
-      "skills": [
-        { "name": "HTML", "logo": "/assets/logo/html.png" },
-        { "name": "CSS", "logo": "/assets/logo/css.png" }
-      ],
-      "websiteLink": "https://pedrogassies.github.io/Projet_Deux_Gassies_Pedro/",
-      "githubLink": "https://github.com/PedroGassies/Projet_Deux_Gassies_Pedro.git",
-      "images": ["/assets/rectangle.png", "/assets/mockup.jpg", "/assets/mockup.jpg"],
-     "year":2024
-    },
-    {
-      "id": 2,
-      "title": "SOPHIE BLUEL",
-      "description": "Ce projet, réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, porte sur la création d'un site portfolio pour une architecte d'intérieur. Il comprend une galerie dynamique alimentée par une API, avec des filtres pour trier les projets par catégorie. La page de connexion pour l'administrateur inclut un système d'authentification et une modale pour gérer l'ajout et la suppression de projets. Une attention particulière a été portée à la gestion des erreurs dans les formulaires pour garantir le bon fonctionnement du site.",
-      "skills": [
-        { "name": "JavaScript", "logo": "/assets/logo/javascript.png" }
-      ],
-      "websiteLink": "",
-      "githubLink": "https://github.com/PedroGassies/Sophie-Bluel.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
-      "year":2024
-    },
-    {
-      "id": 3,
-      "title": "KASA",
-      "description": "Réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, ce projet Kasa est une refonte d'un site de location immobilière en React. L'application propose une interface moderne et fluide, optimisant l'expérience utilisateur. Elle permet de naviguer entre plusieurs pages, telles que l'accueil, la galerie des annonces et les détails des propriétés, grâce à React Router. Le projet intègre également des animations et utilise SASS pour une conception CSS avancée.",
-      "skills": [
-        { "name": "React", "logo": "/assets/logo/react.png" },
-        { "name": "JavaScript", "logo": "/assets/logo/javascript.png" },
-        { "name": "SASS", "logo": "/assets/logo/sass.png" }
-      ],
-      "websiteLink": "https://kasa-eight-dun.vercel.app/Home",
-      "githubLink": "https://github.com/PedroGassies/Kasa.git",
-      "images": ["/assets/rectangle.png", "/assets/mockup.jpg", "/assets/mockup.jpg"],
-      "year":2024
-    },
-    {
-      "id": 4,
-      "title": "MON VIEUX GRIMOIRE",
-      "description": "Ce projet a été fait dans le cadre de ma formation Développeur web chez OpenClassrooms. Mon Vieux Grimoire est une application web permettant aux utilisateurs de rechercher, ajouter et noter des livres. J'ai été responsable de la mise en place du serveur, de la gestion de la base de données et de l'authentification des utilisateurs. J'ai également optimisé l'envoi des images des utilisateurs pour garantir des performances optimales tout en respectant les principes du Green Code, avec aussi l'ajout de protection de données.",
-      "skills": [
-        { "name": "Node.js", "logo": "/assets/logo/nodejs.png" },
-        { "name": "Express", "logo": "/assets/logo/express.png" }
-      ],
-      "websiteLink": "",
-      "githubLink": "https://github.com/PedroGassies/MonVieuxGrimoire.git",
-      "images": ["/assets/mockup.jpg", "/assets/mockup.jpg", "/assets/mockup.jpg"],
-      "year":2024
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "BOOKI",
+    "description": "Ce projet, réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, consiste en la création d'une interface web pour une agence de voyage appelée Booki. Il s'agit de découper et d'intégrer une maquette Figma en utilisant HTML et CSS, tout en assurant la responsivité du site pour une compatibilité optimale sur divers appareils et résolutions d'écran.",
+    "skills": [
+      { "name": "HTML", "logo": "/assets/logo/html.png" },
+      { "name": "CSS", "logo": "/assets/logo/css.png" }
+    ],
+    "websiteLink": "https://pedrogassies.github.io/Projet_Deux_Gassies_Pedro/",
+    "githubLink": "https://github.com/PedroGassies/Projet_Deux_Gassies_Pedro.git",
+    "images": [
+      { "type": "image", "src": "/assets/images/booki_mockup1.jpg" },
+      { "type": "image", "src": "/assets/images/booki_mockup3.jpg" }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 2,
+    "title": "SOPHIE BLUEL",
+    "description": "Ce projet, réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, porte sur la création d'un site portfolio pour une architecte d'intérieur. Il comprend une galerie dynamique alimentée par une API, avec des filtres pour trier les projets par catégorie. La page de connexion pour l'administrateur inclut un système d'authentification et une modale pour gérer l'ajout et la suppression de projets. Une attention particulière a été portée à la gestion des erreurs dans les formulaires pour garantir le bon fonctionnement du site.",
+    "skills": [
+      { "name": "JavaScript", "logo": "/assets/logo/javascript.png" }
+    ],
+    "websiteLink": "",
+    "githubLink": "https://github.com/PedroGassies/Sophie-Bluel.git",
+    "images": [
+      { "type": "image", "src": "/assets/images/Sophie_mockup1.jpg" },
+      { "type": "image", "src": "/assets/images/Sophie_mockup2.jpg" },
+      { "type": "image", "src": "/assets/images/Sophie_mockup3.jpg" }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 3,
+    "title": "KASA",
+    "description": "Réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms, ce projet Kasa est une refonte d'un site de location immobilière en React. L'application propose une interface moderne et fluide, optimisant l'expérience utilisateur. Elle permet de naviguer entre plusieurs pages, telles que l'accueil, la galerie des annonces et les détails des propriétés, grâce à React Router. Le projet intègre également des animations et utilise SASS pour une conception CSS avancée.",
+    "skills": [
+      { "name": "React", "logo": "/assets/logo/react.png" },
+      { "name": "JavaScript", "logo": "/assets/logo/javascript.png" },
+      { "name": "SASS", "logo": "/assets/logo/sass.png" }
+    ],
+    "websiteLink": "https://kasa-eight-dun.vercel.app/Home",
+    "githubLink": "https://github.com/PedroGassies/Kasa.git",
+    "images": [
+      { "type": "image", "src": "/assets/images/Kasa_mockup1.jpg" },
+      { "type": "image", "src": "/assets/images/Kasa_mockup2.jpg" }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 4,
+    "title": "MON VIEUX GRIMOIRE",
+    "description": "Ce projet a été fait dans le cadre de ma formation Développeur web chez OpenClassrooms. Mon Vieux Grimoire est une application web permettant aux utilisateurs de rechercher, ajouter et noter des livres. J'ai été responsable de la mise en place du serveur, de la gestion de la base de données et de l'authentification des utilisateurs. J'ai également optimisé l'envoi des images des utilisateurs pour garantir des performances optimales tout en respectant les principes du Green Code, avec aussi l'ajout de protection de données.",
+    "skills": [
+      { "name": "Node.js", "logo": "/assets/logo/nodejs.png" },
+      { "name": "Express", "logo": "/assets/logo/express.png" }
+    ],
+    "websiteLink": "",
+    "githubLink": "https://github.com/PedroGassies/MonVieuxGrimoire.git",
+    "images": [
+      { "type": "image", "src": "/assets/images/monvieuxgrimoire_mockup1.jpg" },
+      { "type": "image", "src": "/assets/images/monvieuxgrimoire_mockup2.jpg" }
+    ],
+    "year": 2024
+  }
+]

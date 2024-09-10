@@ -4,10 +4,11 @@ import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './ProjectImages.module.css';
-import ImageModal from '../Modale/Modal'; // Assurez-vous que le chemin est correct
+import ImageModal from '../Modale/Modal'; 
+import { ImageItem } from '../../data/projectTypes'
 
 interface ProjectImagesProps {
-  images: string[];
+  images: ImageItem[]; // Mettez à jour le type ici
   title: string;
 }
 
@@ -66,30 +67,40 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
     <div className={styles.imageContainer}>
       {windowWidth && windowWidth < 768 ? (
         <Slider {...mobileSettings}>
-        {images.map((image, index) => (
-          <div key={index} style={{ textAlign: 'center' }}>
-            <Image 
-              src={image} 
-              alt={title} 
-              width={353} 
-              height={184} 
-              style={{ margin: '0 auto' }} // Centre l'image dans son conteneur
-            />
-          </div>
-        ))}
-      </Slider>
+          {images.map((image, index) =>
+            image.type === 'image' ? (
+              <div key={index} style={{ textAlign: 'center' }}>
+                <Image 
+                  src={image.src} 
+                  alt={title} 
+                  width={353} 
+                  height={184} 
+                  style={{ margin: '0 auto' }} // Centre l'image dans son conteneur
+                />
+              </div>
+            ) : null
+          )}
+        </Slider>
       ) : (
         <div className={styles.imageList}>
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={styles.imageItem}
-              onClick={() => openModal(image)}
-              style={{ cursor: 'pointer' }}
-            >
-              <Image src={image} alt={title} layout="responsive" width={275} height={206} />
-            </div>
-          ))}
+          {images.map((image, index) =>
+            image.type === 'image' ? (
+              <div
+                key={index}
+                className={styles.imageItem}
+                onClick={() => openModal(image.src)}
+                style={{ cursor: 'pointer' }}
+              >
+                <Image 
+                  src={image.src} 
+                  alt={title} 
+                  layout="responsive" 
+                  width={275} 
+                  height={206} 
+                />
+              </div>
+            ) : null
+          )}
         </div>
       )}
       {modalOpen && currentImage && (

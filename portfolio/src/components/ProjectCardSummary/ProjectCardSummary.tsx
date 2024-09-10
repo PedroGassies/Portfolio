@@ -75,21 +75,24 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({ project }) => {
                         <p className={styles.year}>{project.year}</p>
                     </div>
                 </div>
-                <Image
-                    src={project.images[0]}
-                    alt={project.title}
-                    width={353}
-                    height={184}
-                    className={styles.image}
-                    style={{
-                        transform: !isMobile ? `translate(${imagePosition.x}px, ${imagePosition.y}px)` : 'none',
-                        opacity: isMobile || isImageVisible ? 1 : 0, // Garde l'image visible en mobile, mais gère l'opacité en bureau
-                        transition: 'opacity 0.2s ease, transform 0.2s ease',
-                    }}
-                />
+                {project.images[0]?.type === 'image' && (
+                    <Image
+                        src={project.images[0].src}
+                        alt={project.title}
+                        width={353}
+                        height={184}
+                        className={styles.image}
+                        style={{
+                            transform: !isMobile ? `translate(${imagePosition.x}px, ${imagePosition.y}px)` : 'none',
+                            opacity: isMobile || isImageVisible ? 1 : 0, // Garde l'image visible en mobile, mais gère l'opacité en bureau
+                            transition: 'opacity 0.2s ease, transform 0.2s ease',
+                        }}
+                    />
+                )}
             </div>
         </Link>
     );
 };
 
 export default ProjectSummary;
+
