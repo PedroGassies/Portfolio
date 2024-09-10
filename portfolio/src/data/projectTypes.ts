@@ -6,6 +6,7 @@ export interface Skills {
 export interface ImageItem {
     type: 'image' | 'video';
     src: string;
+    screen: string;
 }
 
 export interface Project {
@@ -16,5 +17,6 @@ export interface Project {
     websiteLink: string;
     githubLink: string;
     images: ImageItem[];
+    screen:string;
     year: number;
 }

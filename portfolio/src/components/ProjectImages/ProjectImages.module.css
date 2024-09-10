@@ -25,6 +25,14 @@
     
   }
   .imageItem{
+    height:40%;
+  }
+  .imageItem, .videoItem{
     width: 25%;
+  }
+  .videoItem{
+    padding-bottom: 5px;
+    width:40%;
+    height: auto;
   }
 }

@@ -10,6 +10,7 @@ import { ImageItem } from '../../data/projectTypes'
 interface ProjectImagesProps {
   images: ImageItem[]; // Mettez à jour le type ici
   title: string;
+  screen:string;
 }
 
 const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
@@ -67,7 +68,7 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
     <div className={styles.imageContainer}>
       {windowWidth && windowWidth < 768 ? (
         <Slider {...mobileSettings}>
-          {images.map((image, index) =>
+          {images.slice().reverse().map((image, index) =>
             image.type === 'image' ? (
               <div key={index} style={{ textAlign: 'center' }}>
                 <Image 
@@ -83,7 +84,7 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
         </Slider>
       ) : (
         <div className={styles.imageList}>
-          {images.map((image, index) =>
+          {images.slice().reverse().map((image, index) =>
             image.type === 'image' ? (
               <div
                 key={index}
@@ -99,7 +100,13 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
                   height={206} 
                 />
               </div>
-            ) : null
+            ) : <video className={styles.videoItem} poster={image.screen} key={index} width="275" height="206" controls loop autoPlay muted>
+            <source src={image.src} type="video/mp4" />
+            <track
+              src={image.src}  
+            />
+            Your browser does not support the video tag.
+          </video>
           )}
         </div>
       )}
