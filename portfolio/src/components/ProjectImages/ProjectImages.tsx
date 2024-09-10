@@ -79,7 +79,13 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({ images, title }) => {
                   style={{ margin: '0 auto' }} // Centre l'image dans son conteneur
                 />
               </div>
-            ) : null
+            ) : <video className={styles.videoItem} poster={image.screen} key={index} width="353" height="184" controls loop autoPlay muted>
+            <source src={image.src} type="video/mp4" />
+            <track
+              src={image.src}  
+            />
+            Your browser does not support the video tag.
+          </video>
           )}
         </Slider>
       ) : (
