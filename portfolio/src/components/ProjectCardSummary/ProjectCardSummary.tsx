@@ -86,6 +86,7 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({ project }) => {
                             transform: !isMobile ? `translate(${imagePosition.x}px, ${imagePosition.y}px)` : 'none',
                             opacity: isMobile || isImageVisible ? 1 : 0, // Garde l'image visible en mobile, mais gère l'opacité en bureau
                             transition: 'opacity 0.2s ease, transform 0.2s ease',
+                            margin:"0 auto"
                         }}
                     />
                 )}

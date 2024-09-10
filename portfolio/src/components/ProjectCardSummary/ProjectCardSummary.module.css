@@ -4,6 +4,9 @@
 
 .link .card { 
     margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .link .card p,
@@ -12,9 +15,6 @@
     margin-bottom: 8px;
 }
 
-.link .card .image {
-    object-fit: cover;
-}
 
 .link .card image {
     width: 100%;
@@ -64,9 +64,9 @@
     .image{
         position:absolute;
         bottom:32%;
-        left:40%;
-        width:285px;
-        height:180px;
+        left:45%;
+        width:20%;
+        height:auto;
         opacity:0;
     }
     
