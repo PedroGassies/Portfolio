@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Header.module.css';
 import Link from 'next/link';
+import AnimatedLink from '../AnimatedLink/AnimatedLink';
 
 interface HeaderProps {
   mainColor?: string;
@@ -72,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header>
-    <nav className={styles.nav} style={{ color: isHydrated ? mainColor : undefined }}>
+    <nav className={styles.nav} style={{ color: isHydrated ? mainColor : undefined, '--border-color': secondaryColor }as React.CSSProperties}>
       <Link
         href="/"
         passHref
@@ -93,7 +94,7 @@ export const Header: React.FC<HeaderProps> = ({
         style={{backgroundColor: menuOpen || isClosing ? secondaryColor : 'transparent'}}
         onTransitionEnd={onTransitionEnd}
       >
-        <li>
+        <li style={{ borderColor: secondaryColor }}>
           <Link
             href="/projets"
             passHref
@@ -101,7 +102,8 @@ export const Header: React.FC<HeaderProps> = ({
               color: isHydrated && menuOpen ? mainColor : secondaryColor,
             }}
           >
-            PROJETS
+            <span>PROJETS</span>
+            <span className={styles.borderBottom}></span>
           </Link>
         </li>
         <li>
@@ -112,7 +114,8 @@ export const Header: React.FC<HeaderProps> = ({
               color: isHydrated && menuOpen ? mainColor : secondaryColor,
             }}
           >
-            À PROPOS
+            <span>À PROPOS</span>
+            <span className={styles.borderBottom}></span>
           </Link>
         </li>
         <li>
@@ -123,7 +126,8 @@ export const Header: React.FC<HeaderProps> = ({
               color: isHydrated && menuOpen ? mainColor : secondaryColor,
             }}
           >
-            CONTACT
+            <span>CONTACT</span>
+            <span className={styles.borderBottom}></span>
           </Link>
         </li>
       </ul>

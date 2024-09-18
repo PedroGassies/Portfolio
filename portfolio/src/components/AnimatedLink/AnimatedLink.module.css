@@ -1,0 +1,61 @@
+.animatedLink {
+  position: relative;
+  display: inline-block;
+}
+
+/* Top border */
+.animatedLink .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  transition: width 0.1s ease-in-out;
+}
+
+/* Right border */
+.animatedLink .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 0;
+  transition: height 0.1s ease-in-out 0.1s;
+}
+
+/* Bottom border */
+.animatedLink .bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  transition: width 0.1s ease-in-out 0.2s;
+}
+
+/* Left border */
+.animatedLink .left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  transition: height 0.1s ease-in-out 0.3s;
+}
+
+/* Hover effect to draw the outline */
+.animatedLink:hover .top {
+  width: 100%;
+}
+
+.animatedLink:hover .right {
+  height: 100%;
+}
+
+.animatedLink:hover .bottom {
+  width: 100%;
+}
+
+.animatedLink:hover .left {
+  height: 100%;
+}

@@ -1,5 +1,6 @@
 import React, { FormEvent, useState, useRef } from 'react';
 import styles from './Form.module.css';
+import FlipLink from '../FlipLink/FlipLink';
 
 const Form: React.FC = () => {
   const [result, setResult] = useState<string>("");
@@ -68,7 +69,7 @@ const Form: React.FC = () => {
             required
           ></textarea>
         </div>
-        <button className={styles.send}type="submit">ENVOYER    <picture><img src='./assets/arrow.png' alt="send"></img> </picture></button>
+        <button className={styles.send}type="submit"><FlipLink target="" href="">ENVOYER</FlipLink>    <picture><img src='./assets/arrow.png' alt="send"></img> </picture></button>
         {result && <p>{result}</p>}
       </form>
     </section>

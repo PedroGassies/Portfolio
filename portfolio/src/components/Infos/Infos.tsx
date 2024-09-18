@@ -1,14 +1,14 @@
 import React from 'react';
-import Link from 'next/link'
 import styles from './Infos.module.css';
 import Balise from '../Balise/Balise';
 import Titre from "../Title/Title"
+import FlipLink  from '../FlipLink/FlipLink';
 
 const Infos = () => {
   return (
     <div className={styles.infos}>
         <div className={styles.presentation}></div>
-        <Titre titre={"Un peu plus sur moi"}></Titre>
+        <Titre titre={"QUI JE SUIS"}></Titre>
         <p>Je suis un web développeur de 24 ans résidant sur Paris spécialisé en Front-End. Mes compétences englobent principalement le développement avec React, HTML, CSS et JavaScript. Avide de nouveaux défis, mon objectif est de concevoir des expériences utilisateur intuitives et innovantes. N&apos;hésitez pas à me contacter pour toute demande par mail <a href="mailto:pedrogassies@gmail.com">pedrogassies@gmail.com</a>, ou via la page <a href='/contact'>contact</a>.</p>
       <div className={styles.competences}>
       <h2>Compétences</h2>
@@ -32,11 +32,20 @@ const Infos = () => {
         height={191}
       />
       </picture>
-    <div className={styles.links}>
-    <Link href="/projets">VOIR MES PROJETS <picture><img src='./assets/arrow.png' alt=""></img> </picture>  </Link>
-    <Link href="./assets/CV.pdf" target="_blank" rel="noopener noreferrer">CV <picture><img src='./assets/arrow.png' alt=""></img> </picture></Link>
-    <Link href="https://www.linkedin.com/in/pedro-gassies-1a1681194/" target="_blank" rel="noopener noreferrer"> LINKEDIN <picture><img src='./assets/arrow.png' alt=""></img> </picture> </Link>
-    </div> 
+      <div className={styles.links}>
+      <FlipLink href="/projets" target="_blank">
+        PROJETS
+        
+      </FlipLink>
+      <FlipLink href="./assets/CV.pdf" target="_blank" >
+        CV
+
+      </FlipLink>
+      <FlipLink href="https://www.linkedin.com/in/pedro-gassies-1a1681194/" target="_blank" >
+        LINKEDIN
+
+      </FlipLink>
+    </div>
     </div>
     </div>
     </div>

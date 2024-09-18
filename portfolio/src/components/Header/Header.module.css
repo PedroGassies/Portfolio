@@ -7,7 +7,7 @@
   position: sticky;
   top: 0;
   padding: 10px 0;
-  margin:0 5%;
+  margin: 0 5%;
   z-index: 1000; /* Assure que le menu reste au-dessus des autres éléments */
   box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
@@ -25,30 +25,43 @@
 }
 
 .nav ul li {
-  margin-left:64px;
+  position: relative;
+  padding: 10px;
   list-style: none;
+  margin-left: 64px;
 }
 
 .nav ul li > * {
   text-decoration: none;
+  color: inherit; /* Ensure link text color is inherited */
+}
+
+.nav li {
+  position: relative;
+  padding: 10px;
+  list-style: none;
+}
+
+/* Bordure du bas uniquement */
+.nav ul li .borderBottom {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0; /* Commence à droite */
+  height: 2px;
+  background-color: var(--border-color, #000); /* Couleur de la bordure dynamique */
+  width: 0; /* Initialisé à 0 */
+  transition: width 0.3s ease-in-out; /* Animation de la largeur */
+}
+
+/* Animation au hover */
+.nav ul li:hover .borderBottom {
+  width: 100%; /* S'étend sur toute la largeur */
 }
 
 
-.nav .menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 1.1rem;
-  height: 0.95rem;
-  cursor: pointer; /* Indique que c'est cliquable */
-}
-
-.nav .menu span {
-  height: 0.15rem;
-  width: 100%;
-  background-color: inherit; /* Couleur de fond héritée des props */
-}
 @media (max-width: 768px){
+
   .nav ul li{
     margin-left: 32px;
   }
