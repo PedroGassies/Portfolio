@@ -12,7 +12,17 @@ interface ProjetProps {
 const Projet: React.FC<ProjetProps> = ({ project }) => {
     return (
         <div className={styles.projet}>
-            <Titre titre={project.title} />
+            <div className={styles.titleBack}>
+                <Titre titre={project.title} />
+                <div className={`${styles.links} ${styles.linksDesktop}`}>
+                <a href='/projets' rel="noopener noreferrer">
+                    VOIR LES PROJETS
+                    <picture>
+                        <img src='../../../assets/greenarrow.png' alt="" />
+                    </picture>
+                </a>
+            </div>
+            </div>
             <div className={styles.datas}>
                 <p>{project.description}</p>
                 <div className={styles.informations}>
@@ -33,13 +43,24 @@ const Projet: React.FC<ProjetProps> = ({ project }) => {
                                     <img src='../../../assets/greenarrow.png' alt="" />
                                 </picture>
                             </a>
+
                         )}
+                        
                     </div>
                 </div>
             </div>
             <ProjectImages images={project.images} title={project.title} />
+            <div className={`${styles.links} ${styles.linksMobile}`}>
+                <a href='/projets' rel="noopener noreferrer">
+                    VOIR LES PROJETS
+                    <picture>
+                        <img src='../../../assets/greenarrow.png' alt="" />
+                    </picture>
+                </a>
+            </div>
         </div>
     );
 };
 
 export default Projet;
+

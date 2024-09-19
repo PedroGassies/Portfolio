@@ -1,22 +1,23 @@
+/* Version Desktop */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: none; /* Couleur de fond du menu sera définie via props */
-  color: inherit; /* Couleur du texte héritée des props */
+  background-color: none;
+  color: inherit;
   position: sticky;
   top: 0;
   padding: 10px 0;
   margin: 0 5%;
-  z-index: 1000; /* Assure que le menu reste au-dessus des autres éléments */
-  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .nav > :first-child {
   font-size: 20px;
   font-variation-settings: "wght" 400;
   text-decoration: none;
-  color: inherit; /* Couleur du texte héritée des props */
+  color: inherit;
 }
 
 .nav ul {
@@ -26,68 +27,69 @@
 
 .nav ul li {
   position: relative;
-  padding: 10px;
-  list-style: none;
   margin-left: 64px;
+  list-style: none;
+  font-size: 20px;
 }
 
 .nav ul li > * {
   text-decoration: none;
-  color: inherit; /* Ensure link text color is inherited */
+  color: inherit;
 }
 
-.nav li {
-  position: relative;
-  padding: 10px;
-  list-style: none;
-}
-
-/* Bordure du bas uniquement */
+/* Bordure du bas pour l'effet hover */
 .nav ul li .borderBottom {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 0; /* Commence à droite */
+  right: 0;
   height: 2px;
-  background-color: var(--border-color, #000); /* Couleur de la bordure dynamique */
-  width: 0; /* Initialisé à 0 */
-  transition: width 0.3s ease-in-out; /* Animation de la largeur */
+  background-color: var(--border-color, #000); /* Couleur dynamique */
+  width: 0;
+  transition: width 0.3s ease-in-out;
 }
 
-/* Animation au hover */
+/* Effet hover en version desktop */
 .nav ul li:hover .borderBottom {
-  width: 100%; /* S'étend sur toute la largeur */
+  width: 100%;
 }
 
+.nav .menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.1rem;
+  height: 0.95rem;
+  cursor: pointer;
+}
 
-@media (max-width: 768px){
+.nav .menu span {
+  height: 0.15rem;
+  width: 100%;
+  background-color: inherit;
+}
 
-  .nav ul li{
+/* Version Tablet */
+@media (max-width: 768px) {
+  .nav ul li {
     margin-left: 32px;
   }
-}
-
-@media (max-width: 480px) {
   .nav ul li > * {
     display: block;
     text-decoration: none;
-    color: inherit; /* Couleur du texte héritée des props */
+    color: inherit;
     padding: 0.5rem;
     margin: 0 0.5rem;
   }
-  .nav > a {
+  
+  .nav > a, .nav ul li > a {
     color: inherit;
     background-color: inherit;
   }
 
-  .nav ul li > a {
-    color: inherit;
-    background-color: inherit;
-  }
   .nav {
     padding: 30px 0;
   }
-  
   .nav ul {
     display: flex;
     flex-direction: column;
@@ -98,31 +100,39 @@
     width: 90%;
     height: 100%;
     background-color: inherit;
-    transition: transform 0.5s ease-in-out; /* Transition pour l'animation */
+    transition: transform 0.5s ease-in-out;
     overflow-y: auto;
     box-sizing: border-box;
     margin-top: 0;
   }
-  .nav li{
-    margin:25px 0;
-  }
-  .nav ul.open {
 
-    transform: translateX(100%); /* Ouvre le menu */
+  .nav li {
+    margin: 25px 0;
+  }
+
+  .nav ul.open {
+    transform: translateX(100%);
   }
 
   .nav ul.closed {
-    transform: translateX(-100%); /* Ferme le menu */
+    transform: translateX(-100%);
   }
 
   .nav .menu {
     display: flex;
   }
+
   .nav ul.open, .nav ul.closed{
     font-size: 20px;
     letter-spacing: 1px;
     font-variation-settings: "wght" 400;
     align-items: center;
   }
+}
+
+/* Version Mobile */
+@media (max-width: 480px) {
   
 }
+
+

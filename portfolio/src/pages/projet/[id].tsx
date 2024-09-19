@@ -15,8 +15,7 @@ interface ProjectPageProps {
   const ProjetPage: React.FC<ProjectPageProps> = ({ project }) => {
     return (
       <div className={styles.projet}>
-        <SEO title={`Projet ${project.title} de Pedro Gassies`} description={`Projet réalisé employant des technologies liées au développement web`}  />
-
+        <SEO title={`Projet ${project.title} de Pedro Gassies`} description={`Projet réalisé employant des technologies liées au développement web`}  /> 
         <Header mainColor="#CAD2C5"
             secondaryColor="#52796F"/>
         <main className={styles.body}>

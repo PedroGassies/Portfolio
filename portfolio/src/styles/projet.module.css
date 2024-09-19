@@ -8,11 +8,10 @@ width:77px;
 }
 
 .projet h1{
-    margin-bottom: 24px;
     color:#52796F;
-    border-bottom: #52796F 1px solid;
     height:40px;
     padding-left: 2px;
+    margin-bottom: 0;
 }
 
 .projet p{
