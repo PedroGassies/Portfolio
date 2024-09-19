@@ -5,11 +5,13 @@ import Titre from "../components/Title/Title"
 import React from 'react';
 import styles from "../styles/contact.module.css"
 import Form from '../components/Form/Form';
+import SEO from "../components/SEO/SEO";
 
 
 const ContactPage: React.FC = () => {
     return (
         <div className={styles.contact}>
+            <SEO title="Contacter Pedro Gassies" description="Utilisez ce formulaire pour contacter Pedro Gassies, ou envoyez-lui un email directement."/>
             <Header mainColor="#52796F"
             secondaryColor="#CAD2C5"/>
         <main className={styles.body}>

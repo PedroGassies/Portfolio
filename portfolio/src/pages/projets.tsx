@@ -7,6 +7,7 @@ import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 import { Project } from '../data/projectTypes';
 import styles from '../styles/projets.module.css';
+import SEO from "../components/SEO/SEO"
 
 interface ProjectsPageProps {
     projects: Project[];
@@ -15,6 +16,7 @@ interface ProjectsPageProps {
 const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
     return (
         <div className={styles.projets}>
+            <SEO title="Projets de Pedro Gassies" description="Découvrez les projets réalisés par Pedro Gassies." />
             <Header mainColor="#CAD2C5"
             secondaryColor="#52796F"/>
             <main className={styles.body}>

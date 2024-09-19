@@ -4,6 +4,7 @@ import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer";
 import HiddenImages from "../components/HiddenImages/HiddenImages";
 import {imageItems} from "../data/ImageData"
+import SEO from "../components/SEO/SEO"
 
 const App = () => {
   const firstHalf = imageItems.slice(0, imageItems.length / 2);
@@ -11,6 +12,7 @@ const App = () => {
 
   return (
     <div className={styles.index}>
+      <SEO title="Pedro Gassies - Portfolio" description="Bienvenue sur la page d'accueil de mon site web."/>
       <Header mainColor="#1C2226"
       secondaryColor="#FFFAF4"/>
         <main className={styles.body}>
