@@ -1,4 +1,6 @@
-
+.formulaire input:focus,.field:focus{
+    outline: none;
+}
 
 .formulaire{
     margin-top: 48px;
