@@ -7,7 +7,7 @@ type SEOProps = {
   image?: string;
 };
 
-const SEO = ({ title, description, url = 'https://ton-site.com', image = '"./assets/images/ContentImage.png"' }: SEOProps) => {
+const SEO = ({ title, description, url = 'https://ton-site.com', image = './assets/images/ContentImage.png' }: SEOProps) => {
   return (
     <Head>
       <title>{title}</title>
