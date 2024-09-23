@@ -55,8 +55,6 @@
 }
 
 .me img{
-    width: 286px;
-    height: 191px;
     margin-bottom:44px;
 }
 
@@ -93,12 +91,6 @@
       width: 100%; /* Assure que la largeur du conteneur est 100% de la colonne */
       display: flex; /* Utiliser flex pour aligner l'image */
       justify-content: flex-end; /* Aligner le contenu à droite */
-    }
-  
-    .me img {
-      width: 330px;
-      height: 220px;
-      padding-right: 0.5rem;
     }
   
     .infos p {

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 import styles from './Infos.module.css';
 import Balise from '../Balise/Balise';
 import Titre from "../Title/Title"
@@ -25,11 +26,11 @@ const Infos = () => {
       <Balise className={styles.balise} textColor='#354F52' backgroundColor='#CAD2C5' content='Design Responsive'></Balise>
     </div>
     <picture className={styles.me}>
-      <img
-        src="./assets/PedroGassies.jpg"
+      <Image
+        src="/assets/PedroGassies.jpg"
         alt="Pedro Gassies"
-        width={147}
-        height={191}
+        width={169}
+        height={250}
       />
       </picture>
       <div className={styles.links}>
