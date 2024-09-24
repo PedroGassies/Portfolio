@@ -1,0 +1,32 @@
+.notification {
+    padding: 0.5rem; /* p-2 */
+    position: fixed; /* Positionner le conteneur de manière fixe */
+    top: 60px; /* Distance par rapport au haut de l'écran */
+    right: 20px;
+    z-index:15;
+    border-radius: 0.375rem; /* rounded */
+    gap: 0.5rem; /* gap-2 */
+    font-size: 0.875rem; /* text-xs */
+    font-weight: 500; /* font-medium */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    color: white; /* text-white */
+    background-color: rgb(53, 79, 82); /* bg-indigo-500 */
+    pointer-events: auto; /* pointer-events-auto */
+  }
+  
+  .notification .icon-check {
+    margin-top: 0.125rem; /* mt-0.5 */
+  }
+  
+  .notification .close-button {
+    margin-left: auto; /* ml-auto */
+    margin-top: 0.125rem; /* mt-0.5 */
+  }
+  
+  .close-button {
+    background: transparent; /* Pour que le bouton soit invisible */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Pour indiquer que c'est cliquable */
+    color: white; /* Assurez-vous que la couleur est visible */
+    font-size: 1rem; /* Ajuste la taille de l'icône si nécessaire */
+  }

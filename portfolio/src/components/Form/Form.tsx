@@ -1,10 +1,21 @@
 import React, { FormEvent, useState, useRef } from 'react';
 import styles from './Form.module.css';
 import FlipLink from '../FlipLink/FlipLink';
+import Notifications from '../Notification/Notification';
+
+type NotificationType = {
+  id: number;
+  text: string;
+};
 
 const Form: React.FC = () => {
   const [result, setResult] = useState<string>("");
+  const [notifications, setNotifications] = useState<NotificationType[]>([]);
   const formRef = useRef<HTMLFormElement>(null);
+
+  const removeNotif = (id: number) => {
+    setNotifications((prev) => prev.filter((n) => n.id !== id));
+  };
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -16,7 +27,6 @@ const Form: React.FC = () => {
     }
 
     const formData = new FormData(formRef.current);
-
     formData.append("access_key", "8b0d1989-9836-4aab-8464-7dea1369f4db");
 
     try {
@@ -30,6 +40,13 @@ const Form: React.FC = () => {
       if (data.success) {
         setResult("Form Submitted Successfully");
         formRef.current.reset(); // Réinitialiser le formulaire après soumission
+
+        // Ajouter une notification
+        const newNotification = {
+          id: Math.random(), // Un identifiant unique pour la notification
+          text: "Votre requête a bien été transmise.",
+        };
+        setNotifications((prev) => [newNotification, ...prev]);
       } else {
         console.log("Error", data);
         setResult(data.message);
@@ -69,8 +86,16 @@ const Form: React.FC = () => {
             required
           ></textarea>
         </div>
-        <button className={styles.send}type="submit"><FlipLink target="" href="">ENVOYER</FlipLink>    <picture><img src='./assets/arrow.png' alt="send"></img> </picture></button>
-        {result && <p>{result}</p>}
+        <button className={styles.send} type="submit">
+          <FlipLink target="" href="">ENVOYER</FlipLink>
+          <picture>
+            <img src='./assets/arrow.png' alt="send" />
+          </picture>
+        </button>
+        <Notifications
+          notifications={notifications}
+          removeNotif={removeNotif}
+        />
       </form>
     </section>
   );

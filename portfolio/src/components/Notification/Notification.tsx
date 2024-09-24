@@ -1,32 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { FiCheckSquare, FiX } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
-import "./SlideInNotifications.css"; // Import the CSS file
+import styles from "./Notification.module.css"; // Assurez-vous d'avoir un fichier de style
 
-const SlideInNotifications = () => {
-  const [notifications, setNotifications] = useState<NotificationType[]>([]);
+export type NotificationType = {
+  id: number;
+  text: string;
+};
 
-  const removeNotif = (id: number) => {
-    setNotifications((pv) => pv.filter((n) => n.id !== id));
-  };
+type NotificationsProps = {
+  notifications: NotificationType[];
+  removeNotif: (id: number) => void;
+};
 
+const Notifications = ({
+  notifications,
+  removeNotif,
+}: NotificationsProps) => {
   return (
-    <div className="notification-container">
-      <button
-        onClick={() => {
-          setNotifications((pv) => [generateRandomNotif(), ...pv]);
-        }}
-        className="add-notification-button"
-      >
-        Add notification
-      </button>
-      <div className="notifications-wrapper">
-        <AnimatePresence>
-          {notifications.map((n) => (
-            <Notification removeNotif={removeNotif} {...n} key={n.id} />
-          ))}
-        </AnimatePresence>
-      </div>
+    <div className={styles["notifications-wrapper"]}>
+      <AnimatePresence>
+        {notifications.map((n) => (
+          <Notification removeNotif={removeNotif} {...n} key={n.id} />
+        ))}
+      </AnimatePresence>
     </div>
   );
 };
@@ -37,14 +34,14 @@ const Notification = ({
   text,
   id,
   removeNotif,
-}: NotificationType & { removeNotif: Function }) => {
+}: NotificationType & { removeNotif: (id: number) => void }) => {
   useEffect(() => {
     const timeoutRef = setTimeout(() => {
       removeNotif(id);
     }, NOTIFICATION_TTL);
 
     return () => clearTimeout(timeoutRef);
-  }, []);
+  }, [id, removeNotif]);
 
   return (
     <motion.div
@@ -53,41 +50,15 @@ const Notification = ({
       animate={{ y: 0, scale: 1 }}
       exit={{ x: "100%", opacity: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
-      className="notification"
+      className={styles["notification"]}
     >
-      <FiCheckSquare className="icon-check" />
+      <FiCheckSquare className={styles["icon-check"]} />
       <span>{text}</span>
-      <button onClick={() => removeNotif(id)} className="close-button">
+      <button onClick={() => removeNotif(id)} className={styles["close-button"]}>
         <FiX />
       </button>
     </motion.div>
   );
 };
 
-export default SlideInNotifications;
-
-type NotificationType = {
-  id: number;
-  text: string;
-};
-
-const generateRandomNotif = (): NotificationType => {
-  const names = [
-    "John Anderson",
-    "Emily Peterson",
-    "Frank Daniels",
-    "Laura Williams",
-    "Donald Sanders",
-    "Tom Smith",
-    "Alexandra Black",
-  ];
-
-  const randomIndex = Math.floor(Math.random() * names.length);
-
-  const data: NotificationType = {
-    id: Math.random(),
-    text: `New notification from ${names[randomIndex]}`,
-  };
-
-  return data;
-};
+export default Notifications;
