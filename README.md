@@ -1,4 +1,3 @@
-#Portfolio - Pedro Gassies
 Ce portfolio présente une sélection de projets et compétences en développement web. Il est conçu pour offrir une navigation fluide et une expérience utilisateur intuitive, tout en mettant en avant un design sobre et élégant. Le site est entièrement développé avec des technologies modernes telles que React, TypeScript et CSS Modules, intégrant des animations Framer Motion pour une meilleure interactivité. Chaque projet présenté met en lumière différentes compétences, de l'intégration front-end à la création de composants réutilisables, dans le respect des bonnes pratiques du développement web.
 
 #Technologies utilisées
